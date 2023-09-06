@@ -1,25 +1,17 @@
 'use client';
 
-import { ComponentProps, useState } from 'react';
-import { Leafy, LeafySm } from '@/assets/icons';
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { HeaderNav } from './HeaderNav';
+import { HeaderIcon } from './HeaderIcon';
 
 export const Header = () => {
-  const [search, setSearch] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
 
   return (
-    <header className={cn('flex p-4 gap-4 w-full', { 'justify-between': !search })}>
-      <LeafyIcon isSearching={search} className="w-fit h-10" />
-      <HeaderNav handleSearch={{ search, setSearch }} />
+    <header className={cn('flex p-4 gap-4 w-full', { 'justify-between': !isSearching })}>
+      <HeaderIcon isSearching={isSearching} className="w-fit h-10" />
+      <HeaderNav isSearching={isSearching} setIsSearching={setIsSearching} />
     </header>
   );
-};
-
-interface LeafyIconProps extends ComponentProps<'svg'> {
-  isSearching: boolean;
-}
-
-export const LeafyIcon = ({ isSearching, ...props }: LeafyIconProps) => {
-  return isSearching ? <LeafySm {...props} /> : <Leafy {...props} />;
 };
