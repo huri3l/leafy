@@ -24,7 +24,7 @@ export const SearchField = ({ onLeave }: SearchFieldProps) => {
     <motion.div initial={{ width: '30%' }} animate={{ width: '100%' }}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input.Root
-          className="grow border-lf-gray-600"
+          className="text-xs"
           type="text"
           placeholder="O que você está procurando?"
           autoFocus

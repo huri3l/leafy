@@ -11,7 +11,7 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(({ children, .
       <input
         ref={ref}
         {...props}
-        className="w-full border-2 border-lf-gray-600 focus:outline-lf-green-400 grow rounded-lg px-2 py-2 text-sm"
+        className="w-full border-2 border-lf-gray-600 focus:outline-lf-green-400 grow rounded-lg px-2 py-2"
       />
       {children}
     </div>
