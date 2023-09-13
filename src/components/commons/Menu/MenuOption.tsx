@@ -2,12 +2,13 @@ import * as Accordion from '@radix-ui/react-accordion';
 import { Icon, IconName } from '../Icon';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
-import { forwardRef } from 'react';
+import { ComponentProps, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
 export interface TMenuOption {
   icon: IconName;
   name: string;
+  link?: string;
   subItems?: {
     label: string;
     link: string;
@@ -22,49 +23,57 @@ export const MenuOption = ({ subItems, ...props }: TMenuOption) => {
   );
 };
 
-const SimpleMenuOption = ({ icon, name }: TMenuOption) => {
+const SimpleMenuOption = ({ icon, name, link }: TMenuOption) => {
   return (
-    <div className="flex gap-2.5 items-center my-2 cursor-pointer">
+    <Link href={link ?? ''} className="flex gap-2.5 items-center my-2 cursor-pointer">
       <Icon name={icon} className="stroke-lf-gray-400 w-6 h-6" />
       <span className="text-lf-gray-600 text-lg">{name}</span>
-    </div>
+    </Link>
   );
 };
 
 const CollapsibleMenuOption = ({ icon, name, subItems }: TMenuOption) => {
   console.log(subItems);
   return (
-    <div>
-      <AccordionTrigger className="w-full flex gap-2.5 justify-between items-center my-2 cursor-pointer">
+    <div className="my-2">
+      <AccordionTrigger className="w-full flex gap-2.5 justify-between items-center cursor-pointer">
         <div className="flex gap-2.5 items-center">
           <Icon name={icon} className="stroke-lf-gray-400 w-6 h-6" />
           <span className="text-lf-gray-600 text-lg">{name}</span>
         </div>
-        {/* <ChevronDown className="w-5 h-5" /> */}
       </AccordionTrigger>
-      <AccordionContent>
-        {subItems?.map(({ label, link }, idx) => (
-          <div>{label}</div>
-        ))}
-      </AccordionContent>
+      <Accordion.Content className={cn('AccordionContent', 'flex gap-2.5')}>
+        <div className="self-stretch w-6 pt-2">
+          <div className="bg-lf-gray-300 w-0.5 h-full mx-auto" />
+        </div>
+        <div className={cn('AccordionContentText', 'flex flex-col pt-2 gap-0.5')}>
+          {subItems?.map(({ label, link }, idx) => (
+            <Link href={link} key={label + idx} className="text-lf-gray-600">
+              {label}
+            </Link>
+          ))}
+        </div>
+      </Accordion.Content>
     </div>
   );
 };
 
-const AccordionTrigger = forwardRef(({ children, className, ...props }, forwardedRef) => (
-  <Accordion.Header className="AccordionHeader">
-    <Accordion.Trigger className={cn('AccordionTrigger', className)} {...props} ref={forwardedRef}>
-      {children}
-      <ChevronDown
-        className="AccordionChevron data-[state=open]:rotate-180 transition-transform"
-        aria-hidden
-      />
-    </Accordion.Trigger>
-  </Accordion.Header>
-));
+const AccordionTrigger = forwardRef<HTMLButtonElement, ComponentProps<'button'>>(
+  ({ children, className, ...props }, forwardedRef) => (
+    <Accordion.Header className="AccordionHeader">
+      <Accordion.Trigger
+        className={cn('AccordionTrigger group', className)}
+        {...props}
+        ref={forwardedRef}
+      >
+        {children}
+        <ChevronDown
+          className="AccordionChevron stroke-lf-gray-400 w-5 h-5 group-data-[state=open]:rotate-180 transition-transform"
+          aria-hidden
+        />
+      </Accordion.Trigger>
+    </Accordion.Header>
+  ),
+);
 
-const AccordionContent = forwardRef(({ children, className, ...props }, forwardedRef) => (
-  <Accordion.Content className={cn('AccordionContent', className)} {...props} ref={forwardedRef}>
-    <div className="AccordionContentText">{children}</div>
-  </Accordion.Content>
-));
+AccordionTrigger.displayName = 'AccordionTrigger';
