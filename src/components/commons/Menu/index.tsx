@@ -70,7 +70,7 @@ export const Menu = () => {
       </Dialog.Trigger>
       <Dialog.Overlay className="fixed inset-0 bg-black/40" />
 
-      <Dialog.Content className="fixed top-0 right-0 w-5/6 h-full bg-lf-gray-100 p-6 group-data-[state=open]:bg-blue transition-all">
+      <Dialog.Content className="fixed top-0 right-0 w-5/6 h-full bg-lf-gray-100 p-6 group-data-[state=open]:bg-blue transition-all animate-expand-menu">
         <div className="flex flex-col justify-between h-full">
           <div className="space-y-6">
             <Dialog.Close>

@@ -33,7 +33,6 @@ const SimpleMenuOption = ({ icon, name, link }: TMenuOption) => {
 };
 
 const CollapsibleMenuOption = ({ icon, name, subItems }: TMenuOption) => {
-  console.log(subItems);
   return (
     <div className="my-2">
       <AccordionTrigger className="w-full flex gap-2.5 justify-between items-center cursor-pointer">
@@ -42,7 +41,9 @@ const CollapsibleMenuOption = ({ icon, name, subItems }: TMenuOption) => {
           <span className="text-lf-gray-600 text-lg">{name}</span>
         </div>
       </AccordionTrigger>
-      <Accordion.Content className={cn('AccordionContent', 'flex gap-2.5')}>
+      <Accordion.Content
+        className={cn('AccordionContent', 'flex gap-2.5 animate-expand-bottom-full')}
+      >
         <div className="self-stretch w-6 pt-2">
           <div className="bg-lf-gray-300 w-0.5 h-full mx-auto" />
         </div>

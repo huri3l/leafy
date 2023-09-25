@@ -4,7 +4,7 @@ import { LogIn } from 'lucide-react';
 
 export const AccountSection = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 animate-fade-in">
       <strong className="text-lf-gray-600">
         Crie ou entre com sua conta para receber diversos benefícios!
       </strong>

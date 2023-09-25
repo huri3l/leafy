@@ -1,6 +1,5 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Input } from '../../Input';
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { X } from 'lucide-react';
 
@@ -21,18 +20,16 @@ export const SearchField = ({ onLeave }: SearchFieldProps) => {
   };
 
   return (
-    <motion.div initial={{ width: '30%' }} animate={{ width: '100%' }}>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Input.Root
-          className="text-xs"
-          type="text"
-          placeholder="O que você está procurando?"
-          autoFocus
-          {...register('term', { onBlur: onLeave })}
-        >
-          <Input.Icon icon={X} />
-        </Input.Root>
-      </form>
-    </motion.div>
+    <form onSubmit={handleSubmit(onSubmit)} className="animate-expand-full">
+      <Input.Root
+        className="text-xs"
+        type="text"
+        placeholder="O que você está procurando?"
+        autoFocus
+        {...register('term', { onBlur: onLeave })}
+      >
+        <Input.Icon icon={X} />
+      </Input.Root>
+    </form>
   );
 };
