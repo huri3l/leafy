@@ -61,6 +61,11 @@ export const Menu = () => {
       icon: 'Leaf',
       link: '/conheca-a-leafy',
     },
+    {
+      name: 'GitHub',
+      icon: 'Github',
+      link: 'https://github.com/huri3l/leafy',
+    },
   ];
 
   return (

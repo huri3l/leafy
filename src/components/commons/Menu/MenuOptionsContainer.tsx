@@ -19,9 +19,9 @@ export const MenuOptionsContainer = ({ items }: MenuOptionsContainerProps) => {
 
   return (
     <Accordion.Root className="AccordionRoot" type="single" collapsible>
-      {normalizedItems.map(({ icon, name, subItems, isLast }, idx) => (
+      {normalizedItems.map(({ icon, name, subItems, link, isLast }, idx) => (
         <Accordion.Item key={name + idx} value={`item-${idx}`}>
-          <MenuOption key={name + idx} icon={icon} name={name} subItems={subItems} />
+          <MenuOption key={name + idx} icon={icon} name={name} subItems={subItems} link={link} />
           {!isLast && <hr className="border-0.25 border-lf-gray-200 w-32 mx-auto" />}
         </Accordion.Item>
       ))}
