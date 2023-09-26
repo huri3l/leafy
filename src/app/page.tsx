@@ -1,7 +1,18 @@
+import { KnowUs } from '@/components/sections/KnowUs';
+import { SectionHandler } from '@/components/sections/SectionContainer';
+
 export default function Home() {
+  const sections = [
+    {
+      name: 'know_us',
+    },
+  ];
+
   return (
     <main>
-      <h1 className="text-3xl">Home</h1>
+      {sections.map((section, idx) => (
+        <SectionHandler key={section.name + idx} section={section} />
+      ))}
     </main>
   );
 }
