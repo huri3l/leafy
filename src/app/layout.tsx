@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR">
       <body className={cn('bg-lf-gray-100', poppins.className)}>
         <Header />
-        <div className="p-5">{children}</div>
+        <div className="p-4">{children}</div>
       </body>
     </html>
   );

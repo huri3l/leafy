@@ -1,12 +1,8 @@
-import { KnowUs } from '@/components/sections/KnowUs';
-import { SectionHandler } from '@/components/sections/SectionContainer';
+import { SectionHandler, TSection } from '@/components/sections/SectionHandler';
+import { getHomeSections } from '@/sdk/home';
 
-export default function Home() {
-  const sections = [
-    {
-      name: 'know_us',
-    },
-  ];
+export default async function Home() {
+  const sections = await getHomeSections();
 
   return (
     <main>
