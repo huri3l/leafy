@@ -24,7 +24,7 @@ const button = tv({
 
 type ButtonVariants = VariantProps<typeof button>;
 
-type ButtonProps = ComponentProps<'button'> &
+type TButtonProps = ComponentProps<'button'> &
   ButtonVariants & {
     icon?: {
       render: ElementType;
@@ -32,7 +32,7 @@ type ButtonProps = ComponentProps<'button'> &
     };
   };
 
-export const Button = ({ children, className, icon, ...props }: ButtonProps) => {
+export const Button = ({ children, className, icon, ...props }: TButtonProps) => {
   const Icon = icon?.render;
   const position = icon?.position;
 

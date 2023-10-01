@@ -13,9 +13,9 @@ export const SectionHandler = ({ section }: TSectionHandler) => {
   if (!Section) return null;
 
   return (
-    <div>
-      {title && <h3>{title}</h3>}
-      {description && <p>{description}</p>}
+    <div className="space-y-2">
+      {title && <h3 className="font-bold text-xl">{title}</h3>}
+      {description && <p className="mb-2">{description}</p>}
       <Section data={data} />
     </div>
   );

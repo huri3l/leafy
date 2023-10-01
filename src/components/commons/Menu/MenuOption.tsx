@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 import { ComponentProps, forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
-export interface TMenuOption {
+export type TMenuOption = {
   icon: IconName;
   name: string;
   link?: string;
@@ -13,7 +13,7 @@ export interface TMenuOption {
     label: string;
     link: string;
   }[];
-}
+};
 
 export const MenuOption = ({ subItems, ...props }: TMenuOption) => {
   return !!subItems ? (

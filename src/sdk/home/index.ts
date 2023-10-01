@@ -1,7 +1,7 @@
 import { TFormattedHomeItem, THomeItem } from './types';
 
 export async function getHomeSections() {
-  const res = await fetch('http://localhost:3000/api');
+  const res = await fetch('http://localhost:3000/api', { cache: 'no-store' });
 
   if (!res.ok) {
     throw new Error('Erro ao obter os dados da API');

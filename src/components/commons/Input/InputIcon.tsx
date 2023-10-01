@@ -1,12 +1,12 @@
 import { cn } from '@/lib/utils';
 import { ElementType } from 'react';
 
-interface InputIconProps {
+type TInputIconProps = {
   icon: ElementType;
   className?: string;
-}
+};
 
-export const InputIcon = ({ icon: Icon, className }: InputIconProps) => {
+export const InputIcon = ({ icon: Icon, className }: TInputIconProps) => {
   return (
     <Icon
       className={cn(

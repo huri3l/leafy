@@ -1,9 +1,9 @@
 import { ElementType } from 'react';
 
-interface InputIconProps {
+type TInputIconProps = {
   icon: ElementType;
-}
+};
 
-export const LinkButtonIcon = ({ icon: Icon }: InputIconProps) => {
+export const LinkButtonIcon = ({ icon: Icon }: TInputIconProps) => {
   return <Icon className="w-5 h-5 stroke-lf-gray-800" />;
 };

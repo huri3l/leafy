@@ -1,11 +1,11 @@
 import { MenuOption, TMenuOption } from './MenuOption';
 import * as Accordion from '@radix-ui/react-accordion';
 
-interface MenuOptionsContainerProps {
+type TMenuOptionsContainerProps = {
   items: TMenuOption[];
-}
+};
 
-export const MenuOptionsContainer = ({ items }: MenuOptionsContainerProps) => {
+export const MenuOptionsContainer = ({ items }: TMenuOptionsContainerProps) => {
   const normalizeItems = () => {
     return items.map((item, idx) => {
       return {

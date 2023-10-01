@@ -1,10 +1,10 @@
 import { ComponentProps } from 'react';
 import { Leafy, LeafySm } from '@/assets/icons';
 
-interface HeaderIconProps extends ComponentProps<'svg'> {
+type THeaderIconProps = ComponentProps<'svg'> & {
   isSearching: boolean;
-}
+};
 
-export const HeaderIcon = ({ isSearching, ...props }: HeaderIconProps) => {
+export const HeaderIcon = ({ isSearching, ...props }: THeaderIconProps) => {
   return isSearching ? <LeafySm {...props} /> : <Leafy {...props} />;
 };

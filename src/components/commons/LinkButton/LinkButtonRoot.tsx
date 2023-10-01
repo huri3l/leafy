@@ -2,12 +2,12 @@ import { cn } from '@/lib/utils';
 import Link, { LinkProps } from 'next/link';
 import { ReactNode } from 'react';
 
-interface LinkButtonRoot extends LinkProps {
+type TLinkButtonRoot = LinkProps & {
   children: ReactNode;
   className?: string;
-}
+};
 
-export const LinkButtonRoot = ({ children, className, ...props }: LinkButtonRoot) => {
+export const LinkButtonRoot = ({ children, className, ...props }: TLinkButtonRoot) => {
   return (
     <Link
       className={cn(

@@ -3,19 +3,19 @@ import { Input } from '../../Input';
 import { useRouter } from 'next/navigation';
 import { X } from 'lucide-react';
 
-interface SearchFieldProps {
+type TSearchFieldProps = {
   onLeave: () => void;
-}
+};
 
-interface IForm {
+type TForm = {
   term: string;
-}
+};
 
-export const SearchField = ({ onLeave }: SearchFieldProps) => {
-  const { register, handleSubmit } = useForm<IForm>();
+export const SearchField = ({ onLeave }: TSearchFieldProps) => {
+  const { register, handleSubmit } = useForm<TForm>();
   const router = useRouter();
 
-  const onSubmit: SubmitHandler<IForm> = ({ term }) => {
+  const onSubmit: SubmitHandler<TForm> = ({ term }) => {
     router.push(`/produtos?busca=${term}`);
   };
 
