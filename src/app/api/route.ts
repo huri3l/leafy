@@ -98,10 +98,14 @@ export async function GET() {
           {
             title: 'Plantas Decorativas',
             description: 'Ideais para preencher sua casa!',
+            image: 'https://i.imgur.com/ZDT5g8R.png',
+            link: '/c/plantas-decorativas',
           },
           {
             title: 'Plantas Naturais',
             description: 'Para você que gosta de cuidar',
+            image: 'https://i.imgur.com/9O9W932.png',
+            link: '/c/plantas-decorativas',
           },
         ],
         seeAll: true,

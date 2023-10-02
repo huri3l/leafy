@@ -21,6 +21,30 @@ export type TProduct = {
   };
 };
 
+export type TCategoriesDisplay = {
+  mainCategories: {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+  }[];
+  seeAll?: boolean;
+};
+
+export type TAboutUs = {
+  icon: string;
+  title: string;
+  description: string;
+};
+
+export type TGift = {
+  icon: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  description: string;
+};
+
 type THomeItem =
   | {
       name: 'know_us';
@@ -33,6 +57,24 @@ type THomeItem =
       title?: string;
       description?: string;
       data: TProduct[];
+    }
+  | {
+      name: 'categories_display';
+      title?: string;
+      description?: string;
+      data: TCategoriesDisplay[];
+    }
+  | {
+      name: 'about_us';
+      title?: string;
+      description?: string;
+      data: TAboutUs[];
+    }
+  | {
+      name: 'gift';
+      title?: string;
+      description?: string;
+      data: TGift;
     };
 
 export type TFormattedKnowUs = {
@@ -70,4 +112,22 @@ export type TFormattedHomeItem =
       title?: string;
       description?: string;
       data: TFormattedProduct[];
+    }
+  | {
+      name: 'categories_display';
+      title?: string;
+      description?: string;
+      data: TFormattedCategoriesDisplay;
+    }
+  | {
+      name: 'about_us';
+      title?: string;
+      description?: string;
+      data: TAboutUs[];
+    }
+  | {
+      name: 'gift';
+      title?: string;
+      description?: string;
+      data: TGift;
     };

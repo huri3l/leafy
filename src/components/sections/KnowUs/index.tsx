@@ -30,13 +30,13 @@ export const KnowUs = ({ data }: TKnowUsProps) => {
           <strong className="text-xl">{title}</strong>
           <div className="flex gap-5 items-center">
             {statistics.map(({ qty, type }, idx) => (
-              <>
+              <div key={type + idx} className="flex gap-5 items-center">
                 {idx > 0 && <div className="w-[2px] h-10 bg-lf-gray-900" />}
                 <div className="flex flex-col gap-0.5">
                   <strong className="text-lg">{qty}</strong>
                   <span>{type}</span>
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>

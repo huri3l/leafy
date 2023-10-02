@@ -83,7 +83,7 @@ export const Menu = () => {
             </Dialog.Close>
             <MenuOptionsContainer items={staticMenuItems} />
           </div>
-          <AccountSection />
+          {/* <AccountSection /> */}
         </div>
       </Dialog.Content>
     </Dialog.Root>
