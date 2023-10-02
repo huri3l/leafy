@@ -2,7 +2,7 @@ import { Instagram, Youtube } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="mt-14 bg-lf-gray-900 text-white flex flex-col items-center py-8 gap-4">
+    <footer className="bg-lf-gray-900 text-white mt-12 flex flex-col items-center py-8 gap-4">
       <div className="flex flex-col items-center gap-4">
         <strong className="text-2xl">Leafy</strong>
         <p className="text-center text-lf-gray-100">

@@ -1,17 +1,12 @@
 'use client';
-
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import { HeaderNav } from './HeaderNav';
-import { HeaderIcon } from './HeaderIcon';
+import { usePathname } from 'next/navigation';
+import { HeaderComponent } from './Header';
 
 export const Header = () => {
-  const [isSearching, setIsSearching] = useState(false);
+  const blockedRoutes = ['em-desenvolvimento'];
+  const pathname = usePathname();
 
-  return (
-    <header className={cn('flex p-4 gap-4 w-full', { 'justify-between': !isSearching })}>
-      <HeaderIcon isSearching={isSearching} className="w-fit h-10" />
-      <HeaderNav isSearching={isSearching} setIsSearching={setIsSearching} />
-    </header>
-  );
+  const shouldRenderHeader = !blockedRoutes.find((bRoute) => pathname.includes(bRoute));
+
+  return shouldRenderHeader ? <HeaderComponent /> : null;
 };
