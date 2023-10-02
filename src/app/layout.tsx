@@ -1,3 +1,4 @@
+import { Footer } from '@/components/Footer';
 import './globals.css';
 import { Header } from '@/components/commons/Header';
 import { cn } from '@/lib/utils';
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={cn('bg-lf-gray-100', poppins.className)}>
         <Header />
         <div className="p-4">{children}</div>
+        <Footer />
       </body>
     </html>
   );
