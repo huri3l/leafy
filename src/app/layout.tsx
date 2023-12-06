@@ -5,7 +5,11 @@ import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['300', '500', '700'] });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '500', '700'],
+  fallback: ['system-ui', 'arial'],
+});
 
 export const metadata: Metadata = {
   title: 'Leafy',

@@ -1,32 +1,9 @@
-import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
 import { KnowUs } from '../KnowUs';
-
-const DProductCarousel = dynamic(
-  () => import('../ProductCarousel').then((mod) => mod.ProductCarousel),
-  {
-    ssr: false,
-    loading: () => <p>Carregando...</p>,
-  },
-);
-
-const DCategoriesDisplay = dynamic(
-  () => import('../CategoriesDisplay').then((mod) => mod.CategoriesDisplay),
-  {
-    ssr: false,
-    loading: () => <p>Carregando...</p>,
-  },
-);
-
-const DAboutUs = dynamic(() => import('../AboutUs').then((mod) => mod.AboutUs), {
-  ssr: false,
-  loading: () => <p>Carregando...</p>,
-});
-
-const DGift = dynamic(() => import('../Gift').then((mod) => mod.Gift), {
-  ssr: false,
-  loading: () => <p>Carregando...</p>,
-});
+import { ProductCarousel } from '../ProductCarousel';
+import { CategoriesDisplay } from '../CategoriesDisplay';
+import { AboutUs } from '../AboutUs';
+import { Gift } from '../Gift';
 
 type TSectionMap = {
   [key: string]: ComponentType<any>;
@@ -38,8 +15,8 @@ export const getSection = (name: string) => {
 
 const sectionMap: TSectionMap = {
   know_us: KnowUs,
-  product_carousel: DProductCarousel,
-  categories_display: DCategoriesDisplay,
-  about_us: DAboutUs,
-  gift: DGift,
+  product_carousel: ProductCarousel,
+  categories_display: CategoriesDisplay,
+  about_us: AboutUs,
+  gift: Gift,
 };
