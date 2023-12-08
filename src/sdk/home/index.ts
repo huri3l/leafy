@@ -40,7 +40,7 @@ export async function getHomeSections() {
         ...section,
         data: section.data.map(({ slug, price, ...product }) => {
           return {
-            link: `/p/${slug}`,
+            link: `/produto/${slug}`,
             price: price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }),
             ...product,
           };
