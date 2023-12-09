@@ -1,3 +1,4 @@
+import { ProductMain } from '@/components/Product/ProductMain';
 import { Button } from '@/components/commons/Button';
 import { getProduct } from '@/sdk/produto';
 import { ShoppingBasket } from 'lucide-react';
@@ -11,27 +12,15 @@ export default async function ProductPage({ params }: { params: { slug: string }
   return (
     <div>
       <Image
-        src="/assets/product.png"
-        alt="teste"
+        src={product.images[0].url}
+        alt={product.images[0].alt}
         width={0}
         height={0}
         sizes="100vw"
         className="w-full h-auto"
       />
       <div className="p-4">
-        <div className=" space-y-2">
-          <h1 className="font-bold text-xl text-lf-gray-900">Cacto Florido</h1>
-          <div>
-            <p className="line-through text-sm">R$ 49,99</p>
-            <span className="inline-flex gap-2 items-center mb-0.5">
-              <p className="text-lf-green-alt text-xl font-bold">R$ 42,99</p>
-              <p className="text-sm px-1.5 py-0.5 bg-lf-green-200 rounded-md">-15%</p>
-            </span>
-            <p>
-              À vista ou em até <strong>3x de R$ 14,33</strong> sem juros
-            </p>
-          </div>
-        </div>
+        <ProductMain name={product.name} price={product.price} />
 
         <hr className="w-1/2 h-0.5 bg-lf-gray-200 mx-auto my-5" />
 

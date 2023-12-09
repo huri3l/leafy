@@ -1,21 +1,25 @@
+export type TRichText =
+  | { bold: string }
+  | { text: string }
+  | { unordered_list: string[] }
+  | 'line_break';
+
 export interface TProduct {
-  product_images: {
+  images: {
     url: string;
     alt: string;
-}[];
-name: string;
-price: {
+  }[];
+  name: string;
+  price: {
     value: number;
     promotion: {
-        new_value: number;
-        amount: number;
-        condition: {
-            type: string;
-            no_fee_alternative: number;
-        };
+      new_value: number;
+      amount: number;
+      condition: {
+        type: 'cash';
+        no_fee_alternative: number;
+      };
     };
-};
-description: (string | ... 2 more ... | {
-    ...;
-})[];
+  };
+  description: TRichText[];
 }

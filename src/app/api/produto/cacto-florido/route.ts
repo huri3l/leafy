@@ -1,6 +1,6 @@
 export async function GET() {
   const product = {
-    product_images: [
+    images: [
       {
         url: 'https://i.imgur.com/n3P8u3b.png',
         alt: 'Cacto Florido dentro de um vasinho branco',
@@ -57,5 +57,5 @@ export async function GET() {
     ],
   };
 
-  return Response.json({ product });
+  return Response.json(product);
 }
