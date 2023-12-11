@@ -1,4 +1,6 @@
 import { formatPrice } from '@/lib/utils';
+import { RichText } from '../commons/RichText';
+import { TRichText } from '@/sdk/types';
 
 interface ProductMainProps {
   name: string;
@@ -22,11 +24,26 @@ export const ProductMain = ({ name, price }: ProductMainProps) => {
     ? formatPrice(price?.promotion?.new_value)
     : formatPrice(price.value);
   const discountAmount = price?.promotion && `-${price?.promotion?.amount * 100}%`;
-  const details =
-    price?.promotion?.condition.type === 'cash' &&
-    `À vista ou em até ${price?.promotion?.condition.no_fee_alternative}x de ${formatPrice(
-      price?.promotion?.new_value / price?.promotion?.condition.no_fee_alternative,
-    )} sem juros`;
+  const details: TRichText[] | undefined =
+    price?.promotion?.condition.type === 'cash'
+      ? [
+          {
+            text: [
+              {
+                regular: 'À vista ou em até ',
+              },
+              {
+                bold: `${price?.promotion?.condition.no_fee_alternative}x de ${formatPrice(
+                  price?.promotion?.new_value / price?.promotion?.condition.no_fee_alternative,
+                )}`,
+              },
+              {
+                regular: ' sem juros',
+              },
+            ],
+          },
+        ]
+      : undefined;
 
   return (
     <div className=" space-y-2">
@@ -39,9 +56,7 @@ export const ProductMain = ({ name, price }: ProductMainProps) => {
               <p className="text-lf-green-alt text-xl font-bold">{currentPrice}</p>
               <p className="text-sm px-1.5 py-0.5 bg-lf-green-200 rounded-md">{discountAmount}</p>
             </span>
-            <p>
-              À vista ou em até <strong>3x de R$ 14,33</strong> sem juros
-            </p>
+            {details && <RichText content={details} />}
           </>
         )}
       </div>
