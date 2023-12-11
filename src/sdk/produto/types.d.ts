@@ -1,8 +1,4 @@
-export type TRichText =
-  | { bold: string }
-  | { text: string }
-  | { unordered_list: string[] }
-  | 'line_break';
+import { TRichText } from '../types';
 
 export interface TProduct {
   images: {
