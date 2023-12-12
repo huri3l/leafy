@@ -11,7 +11,6 @@ type TDotsProps = {
 };
 
 export const Dots = ({ itemsLength, selectedIndex, scrollTo, style }: TDotsProps) => {
-  console.log('debug', style);
   const arr = new Array(itemsLength).fill(0);
   return (
     <div className={cn('flex gap-1 my-2 justify-center', style?.container)}>

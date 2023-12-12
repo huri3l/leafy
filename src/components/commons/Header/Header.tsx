@@ -9,8 +9,12 @@ export const HeaderComponent = () => {
   const [isSearching, setIsSearching] = useState(false);
 
   return (
-    <header className={cn('flex p-4 gap-4 w-full', { 'justify-between': !isSearching })}>
-      <HeaderIcon isSearching={isSearching} className="w-fit h-10" />
+    <header
+      className={cn('flex px-4 py-2 gap-4 w-full bg-lf-gray-100 z-20 sticky top-0', {
+        'justify-between': !isSearching,
+      })}
+    >
+      <HeaderIcon isSearching={isSearching} className="w-fit h-9" />
       <HeaderNav isSearching={isSearching} setIsSearching={setIsSearching} />
     </header>
   );
