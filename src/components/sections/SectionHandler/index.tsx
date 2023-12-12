@@ -1,4 +1,3 @@
-'use client';
 import { TFormattedHomeItem } from '@/sdk/home/types';
 import { getSection } from './getSection';
 

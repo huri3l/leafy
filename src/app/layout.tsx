@@ -4,7 +4,6 @@ import { Header } from '@/components/commons/Header';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import { useRouter } from 'next/navigation';
 
 const poppins = Poppins({
   subsets: ['latin'],

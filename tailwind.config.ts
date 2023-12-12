@@ -24,6 +24,9 @@ const config: Config = {
       borderWidth: {
         '0.25': '0.063rem',
       },
+      dropShadow: {
+        'xl-darker': '0px 4px 4px rgba(0, 0, 0, 0.25)',
+      },
       animation: {
         'fade-in': 'fade-in 1s linear forwards',
         'expand-menu': 'expand-83 0.2s linear forwards',

@@ -1,18 +1,34 @@
+'use client';
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Dots } from './Dots';
 import { Arrows } from './Arrows';
+import { cn } from '@/lib/utils';
 
 type TCarouselProps = PropsWithChildren &
   EmblaOptionsType & {
     arrows?: boolean;
-    dots?: boolean;
+    dots?: {
+      visible: boolean;
+      style?: {
+        container?: string;
+        dot?: string;
+      };
+    };
+    className?: string;
   };
 
 export const Carousel = ({
   children,
   arrows = false,
-  dots = false,
+  dots = {
+    visible: false,
+    style: {
+      container: '',
+      dot: '',
+    },
+  },
+  className,
   ...options
 }: TCarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
@@ -36,12 +52,17 @@ export const Carousel = ({
   const canScrollNext = !!emblaApi?.canScrollNext();
 
   return (
-    <>
+    <div className={className}>
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">{children}</div>
       </div>
-      {dots && (
-        <Dots itemsLength={length} selectedIndex={selectedIndex} scrollTo={emblaApi?.scrollTo} />
+      {dots.visible && (
+        <Dots
+          style={dots.style}
+          itemsLength={length}
+          selectedIndex={selectedIndex}
+          scrollTo={emblaApi?.scrollTo}
+        />
       )}
       {arrows && (
         <Arrows
@@ -51,7 +72,7 @@ export const Carousel = ({
           onPrev={() => emblaApi?.scrollPrev()}
         />
       )}
-    </>
+    </div>
   );
 };
 export default Carousel;

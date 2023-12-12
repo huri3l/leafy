@@ -5,6 +5,18 @@ export async function GET() {
         url: 'https://i.imgur.com/n3P8u3b.png',
         alt: 'Cacto Florido dentro de um vasinho branco',
       },
+      {
+        url: 'https://i.imgur.com/n3P8u3b.png',
+        alt: 'Cacto Florido dentro de um vasinho branco',
+      },
+      {
+        url: 'https://i.imgur.com/n3P8u3b.png',
+        alt: 'Cacto Florido dentro de um vasinho branco',
+      },
+      {
+        url: 'https://i.imgur.com/n3P8u3b.png',
+        alt: 'Cacto Florido dentro de um vasinho branco',
+      },
     ],
     name: 'Cacto Florido',
     price: {

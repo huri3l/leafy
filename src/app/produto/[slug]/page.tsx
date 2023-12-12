@@ -1,25 +1,46 @@
 import { ProductMain } from '@/components/Product/ProductMain';
 import { Button } from '@/components/commons/Button';
+import Carousel from '@/components/commons/Carousel';
 import { RichText } from '@/components/commons/RichText';
 import { getProduct } from '@/sdk/produto';
+import { EmblaOptionsType } from 'embla-carousel-react';
 import { ShoppingBasket } from 'lucide-react';
 import Image from 'next/image';
 
 export default async function ProductPage({ params }: { params: { slug: string } }) {
   const product = await getProduct(params.slug);
-
-  console.log(product.description);
+  const carouselOptions: EmblaOptionsType = { loop: true, align: 'start' };
 
   return (
     <div>
-      <Image
-        src={product.images[0].url}
-        alt={product.images[0].alt}
-        width={0}
-        height={0}
-        sizes="100vw"
-        className="w-full h-auto"
-      />
+      <div className="sandbox__carousel">
+        <div>
+          <Carousel
+            {...carouselOptions}
+            dots={{
+              visible: true,
+              style: {
+                container: 'absolute bottom-2 right-4',
+                dot: 'drop-shadow-xl-darker',
+              },
+            }}
+            className="flex relative"
+          >
+            {product.images.map((image, idx) => (
+              <Image
+                key={image.url + idx}
+                src={image.url}
+                alt={image.alt}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full flex-[0_0_100%] h-auto"
+              />
+            ))}
+          </Carousel>
+        </div>
+      </div>
+
       <div className="p-4">
         <ProductMain name={product.name} price={product.price} />
 
