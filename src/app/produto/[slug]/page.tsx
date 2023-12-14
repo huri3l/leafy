@@ -34,10 +34,11 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full flex-[0_0_100%] h-auto"
+                className="w-full flex-[0_0_100%] h-auto rounded-b-3xl"
               />
             ))}
           </Carousel>
+          <hr className="h-1 w-10/12 mx-auto bg-gradient-to-r from-transparent via-lf-green-alt to-transparent" />
         </div>
       </div>
 
