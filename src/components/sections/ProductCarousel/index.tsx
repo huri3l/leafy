@@ -1,10 +1,7 @@
-import { Button } from '@/components/commons/Button';
+import { ProductCard } from '@/components/Product/ProductCard';
 import { Carousel } from '@/components/commons/Carousel';
 import { TFormattedProduct } from '@/sdk/home/types';
 import { EmblaOptionsType } from 'embla-carousel-react';
-import { ShoppingBag } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export type TProductCarouselProps = {
   data: TFormattedProduct[];
@@ -17,37 +14,8 @@ export const ProductCarousel = ({ data: products }: TProductCarouselProps) => {
     <section className="sandbox__carousel">
       <div className="lg:w-3/4 mx-auto my-2">
         <Carousel {...carouselOptions} dots={{ visible: true }}>
-          {products.map(({ name, link, price, image }, idx) => (
-            <div key={name + idx} className="flex-[0_0_50%] mr-4">
-              <div className="flex flex-col rounded-lg bg-white w-fit">
-                <div className="relative w-48 h-48">
-                  <Link href={link}>
-                    <Image
-                      src={image.url}
-                      alt={image.alt}
-                      fill
-                      unoptimized
-                      className="rounded-t-lg"
-                    />
-                  </Link>
-                </div>
-                <div className="flex flex-col p-2.5">
-                  <span>{name}</span>
-                  <span className="text-lf-green-alt">{price}</span>
-                  <Button
-                    size="sm"
-                    color="success"
-                    icon={{
-                      render: ShoppingBag,
-                      position: 'left',
-                    }}
-                    className="mt-2 w-fit mx-auto"
-                  >
-                    Adicionar
-                  </Button>
-                </div>
-              </div>
-            </div>
+          {products.map((product, idx) => (
+            <ProductCard key={product.name + idx} {...product} className="flex-[0_0_50%] mr-4" />
           ))}
         </Carousel>
       </div>

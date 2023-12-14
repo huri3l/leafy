@@ -9,6 +9,7 @@ const button = tv({
       primary: 'text-lf-gray-800 bg-lf-green-200',
       secondary: 'text-lf-gray-800 border',
       success: 'text-lf-gray-800 bg-lf-green-400',
+      transparent: 'text-lf-gray-800 bg-transparent',
     },
     size: {
       sm: 'px-3 py-1.5 text-base',
@@ -37,7 +38,7 @@ export const Button = ({ children, className, icon, ...props }: TButtonProps) =>
   const position = icon?.position;
 
   return (
-    <button className={cn(button(props), className, 'flex items-center justify-center gap-1')}>
+    <button className={cn(button(props), 'flex items-center justify-center gap-1', className)}>
       {icon && Icon && position === 'left' && <Icon className="w-5 h-5" />}
       {children}
       {icon && Icon && position === 'right' && <Icon className="w-5 h-5" />}

@@ -2,19 +2,11 @@ export async function GET() {
   const product = {
     images: [
       {
-        url: 'https://i.imgur.com/n3P8u3b.png',
-        alt: 'Cacto Florido dentro de um vasinho branco',
+        url: 'https://i.imgur.com/Bbbm2Rw.png',
+        alt: 'Cacto Florido dentro de um vasinho branco em formato de xícara',
       },
       {
-        url: 'https://i.imgur.com/n3P8u3b.png',
-        alt: 'Cacto Florido dentro de um vasinho branco',
-      },
-      {
-        url: 'https://i.imgur.com/n3P8u3b.png',
-        alt: 'Cacto Florido dentro de um vasinho branco',
-      },
-      {
-        url: 'https://i.imgur.com/n3P8u3b.png',
+        url: 'https://i.imgur.com/JVKReGX.png',
         alt: 'Cacto Florido dentro de um vasinho branco',
       },
     ],

@@ -35,15 +35,7 @@ export async function GET() {
             alt: 'Cacto florido em um vaso em formato de xícara',
           },
         },
-        {
-          slug: 'planta-decorativa',
-          name: 'Planta Decorativa',
-          price: 45.99,
-          image: {
-            url: 'https://i.imgur.com/AAs1dGQ.png',
-            alt: 'Planta decorativa linda com um potinho',
-          },
-        },
+
         {
           slug: 'cacto-duplo',
           name: 'Cacto Duplo',
@@ -51,6 +43,15 @@ export async function GET() {
           image: {
             url: 'https://i.imgur.com/L0YaEEM.png',
             alt: 'Cacto duplo em um potinho',
+          },
+        },
+        {
+          slug: 'planta-decorativa',
+          name: 'Planta Decorativa',
+          price: 45.99,
+          image: {
+            url: 'https://i.imgur.com/AAs1dGQ.png',
+            alt: 'Planta decorativa linda com um potinho',
           },
         },
       ],
@@ -99,13 +100,13 @@ export async function GET() {
             title: 'Plantas Decorativas',
             description: 'Ideais para preencher sua casa!',
             image: 'https://i.imgur.com/ZDT5g8R.png',
-            link: '/c/plantas-decorativas',
+            link: '/categoria/plantas-decorativas',
           },
           {
             title: 'Plantas Naturais',
             description: 'Para você que gosta de cuidar',
             image: 'https://i.imgur.com/9O9W932.png',
-            link: '/c/plantas-decorativas',
+            link: '/categoria/plantas-decorativas',
           },
         ],
         seeAll: true,
