@@ -24,7 +24,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 dot: 'drop-shadow-xl-darker',
               },
             }}
-            className="flex relative"
+            className="flex relative w-full"
           >
             {product.images.map((image, idx) => (
               <Image
@@ -34,7 +34,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-full flex-[0_0_100%] h-auto rounded-b-3xl"
+                className="w-full flex-[1_0_100%] h-auto rounded-b-3xl"
               />
             ))}
           </Carousel>

@@ -17,6 +17,7 @@ export interface TCategory {
 
 export interface TFormattedCategory extends TCategory {
   products: {
+    tags?: string[];
     slug: string;
     name: string;
     price: string;

@@ -6,15 +6,15 @@ const button = tv({
   base: 'font-medium rounded-md',
   variants: {
     color: {
-      primary: 'text-lf-gray-800 bg-lf-green-200',
-      secondary: 'text-lf-gray-800 border',
-      success: 'text-lf-gray-800 bg-lf-green-400',
-      transparent: 'text-lf-gray-800 bg-transparent',
+      primary: 'text-lf-gray-800 bg-lf-green-200 border-2 border-lf-green-200',
+      secondary: 'text-lf-gray-800 font-normal border-2 border-lf-green-200',
+      success: 'text-lf-gray-800 bg-lf-green-400 border-2 border-lf-green-400',
+      transparent: 'text-lf-gray-800 bg-transparent border-2 border-transparent',
     },
     size: {
-      sm: 'px-3 py-1.5 text-base',
-      md: 'px-3 py-2 text-base',
-      lg: 'px-4 py-3 text-lg',
+      sm: 'px-2 py-1.5 text-base',
+      md: 'px-2 py-2 text-base',
+      lg: 'px-3 py-2 text-lg',
     },
   },
   defaultVariants: {

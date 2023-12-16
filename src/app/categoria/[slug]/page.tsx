@@ -2,9 +2,11 @@ import { Filter } from '@/components/Product/Filter';
 import { ProductCard } from '@/components/Product/ProductCard';
 import { Sort } from '@/components/Product/Sort';
 import { getCategory } from '@/sdk/categoria';
+import { getFilterOptionsFromProducts } from '@/sdk/produto';
 
-export default async function ProductPage({ params }: { params: { slug: string } }) {
+export default async function CategoryPage({ params }: { params: { slug: string } }) {
   const category = await getCategory(params.slug);
+  const filterOptions = getFilterOptionsFromProducts(category.products, true);
 
   return (
     <div className="p-4 space-y-6">
@@ -15,8 +17,8 @@ export default async function ProductPage({ params }: { params: { slug: string }
       <div className="space-y-4">
         <strong className="text-xl">{category.name}</strong>
         <div className="flex w-fit px-6 mx-auto gap-8 border-b-2 border-b-lf-gray-200">
-          {/* <Filter options={} />
-          <Sort /> */}
+          <Filter options={filterOptions} hasPriceFilter={true} />
+          <Sort />
         </div>
       </div>
       <div className="flex flex-wrap justify-center gap-4">

@@ -19,3 +19,8 @@ export interface TProduct {
   };
   description: TRichText[];
 }
+
+export interface TFilterOption {
+  title: string;
+  possibilities: string[];
+}

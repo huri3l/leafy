@@ -90,7 +90,8 @@ export type TFormattedKnowUs = {
   search: string;
 };
 
-export type TFormattedProduct = {
+export type TFormattedProductCard = {
+  tags?: string[];
   link: string;
   name: string;
   price: string;
@@ -111,7 +112,7 @@ export type TFormattedHomeItem =
       name: 'product_carousel';
       title?: string;
       description?: string;
-      data: TFormattedProduct[];
+      data: TFormattedProductCard[];
     }
   | {
       name: 'categories_display';

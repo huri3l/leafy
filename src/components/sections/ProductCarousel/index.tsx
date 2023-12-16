@@ -1,10 +1,10 @@
 import { ProductCard } from '@/components/Product/ProductCard';
 import { Carousel } from '@/components/commons/Carousel';
-import { TFormattedProduct } from '@/sdk/home/types';
+import { TFormattedProductCard } from '@/sdk/home/types';
 import { EmblaOptionsType } from 'embla-carousel-react';
 
 export type TProductCarouselProps = {
-  data: TFormattedProduct[];
+  data: TFormattedProductCard[];
 };
 
 export const ProductCarousel = ({ data: products }: TProductCarouselProps) => {
