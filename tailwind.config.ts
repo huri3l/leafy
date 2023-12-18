@@ -32,7 +32,7 @@ const config: Config = {
         'expand-menu': 'expand-83 0.2s linear forwards',
         'expand-full': 'expand-100 0.3s linear forwards',
         'expand-bottom-full': 'expand-bottom-100 3s linear forwards',
-        'expand-bottom-half': 'expand-bottom-50 0.2s linear forwards',
+        'expand-bottom-3/4': 'expand-bottom-3/4 0.2s linear forwards',
       },
       keyframes: {
         'fade-in': {
@@ -66,7 +66,7 @@ const config: Config = {
             opacity: '1',
           },
         },
-        'expand-bottom-50': {
+        'expand-bottom-3/4': {
           '0%': {
             float: 'top',
             height: '0',
@@ -75,7 +75,7 @@ const config: Config = {
           '5%': { opacity: '1' },
           '100%': {
             float: 'top',
-            height: '50%',
+            height: '75%',
             opacity: '1',
           },
         },

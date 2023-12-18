@@ -1,4 +1,4 @@
-import { formatPrice } from '@/lib/utils';
+import { formatPrice } from '@/sdk/lib/format';
 import { RichText } from '../commons/RichText';
 import { TRichText } from '@/sdk/types';
 

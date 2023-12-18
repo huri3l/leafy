@@ -1,7 +1,7 @@
 import { Footer } from '@/components/Footer';
 import './globals.css';
 import { Header } from '@/components/commons/Header';
-import { cn } from '@/lib/utils';
+import { cn } from '@/sdk/lib/style';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 

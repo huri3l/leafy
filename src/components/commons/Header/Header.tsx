@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/sdk/lib/style';
 import { HeaderNav } from './HeaderNav';
 import { HeaderIcon } from './HeaderIcon';
 

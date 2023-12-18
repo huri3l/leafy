@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/sdk/lib/style';
 import { ComponentProps, ElementType } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
 
@@ -38,7 +38,10 @@ export const Button = ({ children, className, icon, ...props }: TButtonProps) =>
   const position = icon?.position;
 
   return (
-    <button className={cn(button(props), 'flex items-center justify-center gap-1', className)}>
+    <button
+      className={cn(button(props), 'flex items-center justify-center gap-1', className)}
+      {...props}
+    >
       {icon && Icon && position === 'left' && <Icon className="w-5 h-5" />}
       {children}
       {icon && Icon && position === 'right' && <Icon className="w-5 h-5" />}

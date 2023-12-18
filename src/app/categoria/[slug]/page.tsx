@@ -1,8 +1,9 @@
 import { Filter } from '@/components/Product/Filter';
-import { ProductCard } from '@/components/Product/ProductCard';
+import { ProductList } from '@/components/Product/ProductList';
 import { Sort } from '@/components/Product/Sort';
+import { useFilter } from '@/hooks/useFilter';
 import { getCategory } from '@/sdk/categoria';
-import { getFilterOptionsFromProducts } from '@/sdk/produto';
+import { getFilterOptionsFromProducts } from '@/sdk/lib/filter';
 
 export default async function CategoryPage({ params }: { params: { slug: string } }) {
   const category = await getCategory(params.slug);
@@ -21,11 +22,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
           <Sort />
         </div>
       </div>
-      <div className="flex flex-wrap justify-center gap-4">
-        {category.products.map((product, idx) => (
-          <ProductCard key={product.name + idx} {...product} className="flex-[0_0_47%]" />
-        ))}
-      </div>
+      <ProductList rawProductList={category.products} />
     </div>
   );
 }

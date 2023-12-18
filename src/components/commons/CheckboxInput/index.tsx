@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/sdk/lib/style';
 import { forwardRef, ComponentProps } from 'react';
 
 type CheckboxInputProps = ComponentProps<'input'> & {
