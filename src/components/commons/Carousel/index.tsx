@@ -53,7 +53,7 @@ export const Carousel = ({
 
   return (
     <div className={className}>
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div ref={emblaRef}>
         <div className="flex">{children}</div>
       </div>
       {dots.visible && (
