@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { Input } from '../../Input';
+import { TextInput } from '../../Input/Text';
 import { useRouter } from 'next/navigation';
 import { X } from 'lucide-react';
 
@@ -21,15 +21,15 @@ export const SearchField = ({ onLeave }: TSearchFieldProps) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="animate-expand-full">
-      <Input.Root
+      <TextInput.Root
         className="text-xs"
         type="text"
         placeholder="O que você está procurando?"
         autoFocus
         {...register('term', { onBlur: onLeave })}
       >
-        <Input.Icon icon={X} />
-      </Input.Root>
+        <TextInput.Icon icon={X} />
+      </TextInput.Root>
     </form>
   );
 };

@@ -1,9 +1,9 @@
 import { cn } from '@/sdk/lib/style';
 import { forwardRef, ComponentProps } from 'react';
 
-type InputProps = ComponentProps<'input'>;
+type TextInputProps = ComponentProps<'input'>;
 
-export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
+export const TextInputRoot = forwardRef<HTMLInputElement, TextInputProps>(
   ({ children, className, ...props }, ref) => {
     return (
       <div className="relative">
@@ -21,4 +21,4 @@ export const InputRoot = forwardRef<HTMLInputElement, InputProps>(
   },
 );
 
-InputRoot.displayName = 'Input';
+TextInputRoot.displayName = 'TextInput';

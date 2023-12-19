@@ -1,12 +1,12 @@
 import { cn } from '@/sdk/lib/style';
 import { ElementType } from 'react';
 
-type TInputIconProps = {
+type TextInputIconProps = {
   icon: ElementType;
   className?: string;
 };
 
-export const InputIcon = ({ icon: Icon, className }: TInputIconProps) => {
+export const TextInputIcon = ({ icon: Icon, className }: TextInputIconProps) => {
   return (
     <Icon
       className={cn(

@@ -1,10 +1,10 @@
 import { AccordionTrigger } from '@/components/commons/Accordion/AccordionTrigger';
-import { CheckboxInput } from '@/components/commons/CheckboxInput';
+import { CheckboxInput } from '@/components/commons/Input/Checkbox';
 import { cn } from '@/sdk/lib/style';
 import { TFilterOption } from '@/sdk/produto/types';
 import * as Accordion from '@radix-ui/react-accordion';
 import { useFilter } from '@/hooks/useFilter';
-import { NumberInput } from '@/components/NumberInput';
+import { NumberInput } from '@/components/commons/Input/Number';
 import { UseFormRegister } from 'react-hook-form';
 import { FilterFormInputs } from '.';
 

@@ -1,5 +1,5 @@
 'use client';
-import { Input } from '@/components/commons/Input';
+import { TextInput } from '@/components/commons/Input/Text';
 import { TFormattedKnowUs } from '@/sdk/home/types';
 import { Search } from 'lucide-react';
 import Image from 'next/image';
@@ -44,15 +44,15 @@ export const KnowUs = ({ data }: TKnowUsProps) => {
       </div>
       {search && (
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Input.Root
+          <TextInput.Root
             placeholder={search}
             className="border-none h-11 focus:outline-lf-gray-900"
             {...register('term')}
           >
             <button className="focus:outline-black">
-              <Input.Icon icon={Search} className="bg-lf-green-200 p-1.5 w-8 h-8 rounded-md" />
+              <TextInput.Icon icon={Search} className="bg-lf-green-200 p-1.5 w-8 h-8 rounded-md" />
             </button>
-          </Input.Root>
+          </TextInput.Root>
         </form>
       )}
     </div>
