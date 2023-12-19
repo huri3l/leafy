@@ -28,12 +28,7 @@ export async function GET() {
         },
       },
       {
-        tags: [
-          'Categorias-Cacto',
-          'Acompanhamentos-Vaso',
-          'Acompanhamentos-Teste',
-          'Detalhes-Galhos',
-        ],
+        tags: ['Categorias-Cacto', 'Acompanhamentos-Vaso', 'Detalhes-Galhos'],
         slug: 'cacto-duplo',
         name: 'Cacto Duplo',
         price: 52.9,
