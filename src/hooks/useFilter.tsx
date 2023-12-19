@@ -122,17 +122,19 @@ export const useFilter = () => {
       return true;
     };
 
-    const productsTagFiltered = products.filter((product) => {
-      const matchTagFiltersCondition = tagFilters.some((filter) => {
-        return product.tags?.some((tag) => tag.includes(filter));
-      });
+    const productsFiltered = products.filter((product) => {
+      const matchTagFiltersCondition =
+        tagFilters.length === 0 ||
+        tagFilters.some((filter) => {
+          return product.tags?.some((tag) => tag.includes(filter));
+        });
 
       const matchPriceFiltersCondition = _filterProductByPrice(product.price.raw);
 
       return matchTagFiltersCondition && matchPriceFiltersCondition;
     });
 
-    return productsTagFiltered;
+    return productsFiltered;
   };
 
   return {
