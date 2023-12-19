@@ -3,7 +3,6 @@ import { TFormattedProductCard } from '@/sdk/home/types';
 import { ProductCard } from './ProductCard';
 import { useEffect, useState } from 'react';
 import { useFilter } from '@/hooks/useFilter';
-import { filterProducts } from '@/sdk/lib/filter';
 import isEqual from 'lodash/isEqual';
 
 interface ProductListProps {
@@ -12,15 +11,15 @@ interface ProductListProps {
 
 export const ProductList = ({ rawProductList }: ProductListProps) => {
   const [products, setProducts] = useState<TFormattedProductCard[]>(rawProductList);
-  const { filters } = useFilter();
+  const { tagFilters, filterProducts } = useFilter();
 
   useEffect(() => {
-    const filteredProducts = filterProducts(rawProductList, filters);
+    const filteredProducts = filterProducts(rawProductList);
 
     if (!isEqual(products, filteredProducts)) {
       setProducts(filteredProducts);
     }
-  }, [filters]);
+  }, [tagFilters]);
 
   return (
     <div className="flex flex-wrap justify-center gap-4">

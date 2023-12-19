@@ -6,46 +6,75 @@ export const useFilter = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = new URLSearchParams(Array.from(useSearchParams().entries()));
-  const filters = searchParams.get('filter')?.split('&') ?? [];
+  const tagFilters = searchParams.get('filter')?.split('&') ?? [];
+  const priceFilters = {
+    from: searchParams.get('from') ?? undefined,
+    to: searchParams.get('to') ?? undefined,
+  };
 
-  const search = searchParams.toString();
-  const query = `${'?'.repeat(search.length && 1)}${search}`;
+  const updateURL = () => {
+    const search = searchParams.toString();
+    const query = `${'?'.repeat(search.length && 1)}${search}`;
 
-  router.push(`${pathname}${query}`);
+    router.push(`${pathname}${query}`);
+  };
 
-  const insert = (newFilter: string) => {
-    const filterIndex = filters?.indexOf(newFilter);
+  const insertTagFilter = (newFilter: string) => {
+    const filterIndex = tagFilters?.indexOf(newFilter);
 
     if (filterIndex !== -1) return;
 
-    filters?.push(newFilter);
-    searchParams.set('filter', filters.join('&'));
+    tagFilters?.push(newFilter);
+    searchParams.set('filter', tagFilters.join('&'));
 
-    const search = searchParams.toString();
-    const query = `${'?'.repeat(search.length && 1)}${search}`;
-    router.push(`${pathname}${query}`);
+    updateURL();
   };
 
-  const remove = (filterToRemove: string) => {
-    if (filters) {
-      if (filters?.length === 1) {
+  const insertPriceFilter = (method: 'from' | 'to', value: number) => {
+    if (method === 'from') {
+      searchParams.set('from', String(value));
+    }
+
+    if (method === 'to') {
+      searchParams.set('to', String(value));
+    }
+
+    updateURL();
+  };
+
+  const removeTagFilter = (filterToRemove: string) => {
+    if (tagFilters) {
+      if (tagFilters?.length === 1) {
         searchParams.delete('filter');
       } else {
-        searchParams.set('filter', filters.filter((filter) => filter !== filterToRemove).join('&'));
+        searchParams.set(
+          'filter',
+          tagFilters.filter((filter) => filter !== filterToRemove).join('&'),
+        );
       }
     }
 
-    const search = searchParams.toString();
-    const query = `${'?'.repeat(search.length && 1)}${search}`;
-    router.push(`${pathname}${query}`);
+    updateURL();
   };
 
-  const removeAll = () => {
-    searchParams.delete('filter');
+  const removePriceFilter = (method: 'from' | 'to') => {
+    if (method === 'from') {
+      searchParams.delete('from');
+    }
 
-    const search = searchParams.toString();
-    const query = `${'?'.repeat(search.length && 1)}${search}`;
-    router.push(`${pathname}${query}`);
+    if (method === 'to') {
+      searchParams.delete('to');
+    }
+
+    updateURL();
+  };
+
+  const removeAllFilters = () => {
+    searchParams.delete('filter');
+    searchParams.delete('from');
+    searchParams.delete('to');
+
+    updateURL();
   };
 
   const getFilterOptionsFromProducts = (
@@ -77,5 +106,44 @@ export const useFilter = () => {
     return options;
   };
 
-  return { filters, insert, remove, removeAll, getFilterOptionsFromProducts };
+  const filterProducts = (products: TFormattedProductCard[]) => {
+    const _filterProductByPrice = (price: number) => {
+      const from = Number(priceFilters.from);
+      const to = Number(priceFilters.to);
+
+      if (priceFilters.from && priceFilters.to) {
+        return from <= price && to >= price;
+      } else if (priceFilters.from) {
+        return from <= price;
+      } else if (priceFilters.to) {
+        return to >= price;
+      }
+
+      return true;
+    };
+
+    const productsTagFiltered = products.filter((product) => {
+      const matchTagFiltersCondition = tagFilters.some((filter) => {
+        return product.tags?.some((tag) => tag.includes(filter));
+      });
+
+      const matchPriceFiltersCondition = _filterProductByPrice(product.price.raw);
+
+      return matchTagFiltersCondition && matchPriceFiltersCondition;
+    });
+
+    return productsTagFiltered;
+  };
+
+  return {
+    tagFilters,
+    priceFilters,
+    insertTagFilter,
+    insertPriceFilter,
+    removeTagFilter,
+    removePriceFilter,
+    removeAllFilters,
+    filterProducts,
+    getFilterOptionsFromProducts,
+  };
 };

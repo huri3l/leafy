@@ -17,7 +17,10 @@ export async function getCategory(slug: string): Promise<TFormattedCategory> {
         ...product,
         slug,
         link: `/produto/${slug}`,
-        price: price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }),
+        price: {
+          raw: price,
+          formatted: price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }),
+        },
       };
     }),
   };

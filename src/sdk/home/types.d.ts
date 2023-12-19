@@ -94,7 +94,10 @@ export type TFormattedProductCard = {
   tags?: string[];
   link: string;
   name: string;
-  price: string;
+  price: {
+    raw: number;
+    formatted: string;
+  };
   image: {
     url: string;
     alt: string;

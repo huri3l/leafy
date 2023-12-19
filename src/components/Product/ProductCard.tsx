@@ -6,7 +6,10 @@ import Link from 'next/link';
 interface ProductCardProps {
   link: string;
   name: string;
-  price: string;
+  price: {
+    raw: number;
+    formatted: string;
+  };
   image: {
     url: string;
     alt: string;
@@ -33,7 +36,7 @@ export const ProductCard = ({ name, link, price, image, className }: ProductCard
         </div>
         <div className="flex flex-col p-2.5">
           <span>{name}</span>
-          <span className="text-lf-green-alt">{price}</span>
+          <span className="text-lf-green-alt">{price.formatted}</span>
           <Button
             size="sm"
             color="success"

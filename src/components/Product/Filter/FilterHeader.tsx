@@ -4,10 +4,10 @@ import { DialogClose } from '@radix-ui/react-dialog';
 import { X } from 'lucide-react';
 
 export const FilterHeader = () => {
-  const { remove, filters } = useFilter();
+  const { removeTagFilter, tagFilters } = useFilter();
 
   const handleDelete = (filter: string) => {
-    remove(filter);
+    removeTagFilter(filter);
   };
 
   return (
@@ -19,9 +19,9 @@ export const FilterHeader = () => {
         </DialogClose>
       </div>
 
-      {!!filters && (
+      {!!tagFilters && (
         <div className="flex gap-2 flex-wrap pb-4 border-b-2 border-b-lf-gray-200">
-          {filters?.map((filter) => (
+          {tagFilters?.map((filter) => (
             <Chip key={filter} onDelete={() => handleDelete(filter)}>
               {filter}
             </Chip>

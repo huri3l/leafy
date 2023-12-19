@@ -20,7 +20,10 @@ export interface TFormattedCategory extends TCategory {
     tags?: string[];
     slug: string;
     name: string;
-    price: string;
+    price: {
+      raw: number;
+      formatted: string;
+    };
     link: string;
     image: {
       url: string;

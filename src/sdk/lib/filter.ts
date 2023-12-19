@@ -29,13 +29,3 @@ export const getFilterOptionsFromProducts = (
 
   return options;
 };
-
-export const filterProducts = (products: TFormattedProductCard[], filters: string[]) => {
-  return products.filter((product) => {
-    const matchFiltersCondition = filters.some((filter) => {
-      return product.tags?.some((tag) => tag.includes(filter));
-    });
-
-    return matchFiltersCondition;
-  });
-};
