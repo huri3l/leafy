@@ -19,7 +19,7 @@ export const FilterHeader = () => {
         </DialogClose>
       </div>
 
-      {!!tagFilters && (
+      {tagFilters.length > 0 && (
         <div className="flex gap-2 flex-wrap pb-4 border-b-2 border-b-lf-gray-200">
           {tagFilters?.map((filter) => (
             <Chip key={filter} onDelete={() => handleDelete(filter)}>
