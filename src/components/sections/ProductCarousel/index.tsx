@@ -11,7 +11,7 @@ export const ProductCarousel = ({ data: products }: TProductCarouselProps) => {
   const carouselOptions: EmblaOptionsType = { loop: true, align: 'start' };
 
   return (
-    <section className="sandbox__carousel">
+    <section className="sandbox__carousel overflow-hidden">
       <div className="lg:w-3/4 mx-auto my-2">
         <Carousel {...carouselOptions} dots={{ visible: true }}>
           {products.map((product, idx) => (
