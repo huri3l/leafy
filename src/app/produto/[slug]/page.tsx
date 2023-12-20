@@ -13,7 +13,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
 
   return (
     <div>
-      <div className="sandbox__carousel">
+      <div className="sandbox__carousel overflow-hidden">
         <div>
           <Carousel
             {...carouselOptions}

@@ -10,7 +10,7 @@ export const HeaderComponent = () => {
 
   return (
     <header
-      className={cn('flex px-4 py-2 gap-4 w-full bg-lf-gray-100 z-20 sticky top-0', {
+      className={cn('flex px-4 py-2 gap-4 w-full bg-lf-gray-100 z-50 sticky top-0', {
         'justify-between': !isSearching,
       })}
     >

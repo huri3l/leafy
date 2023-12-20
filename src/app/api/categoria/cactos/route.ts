@@ -11,7 +11,7 @@ export async function GET() {
         tags: ['Categorias-Cacto', 'Acompanhamentos-Vaso', 'Detalhes-Florido'],
         slug: 'cacto-florido',
         name: 'Cacto Florido',
-        price: 49.99,
+        price: 42.99,
         image: {
           url: 'https://i.imgur.com/Bbbm2Rw.png',
           alt: 'Cacto florido em um vaso em formato de xícara',

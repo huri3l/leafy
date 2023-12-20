@@ -29,7 +29,7 @@ export async function GET() {
         {
           slug: 'cacto-florido',
           name: 'Cacto Florido',
-          price: 49.99,
+          price: 42.99,
           image: {
             url: 'https://i.imgur.com/Bbbm2Rw.png',
             alt: 'Cacto florido em um vaso em formato de xícara',
@@ -64,7 +64,7 @@ export async function GET() {
         {
           slug: 'cacto-florido',
           name: 'Cacto Florido',
-          price: 49.99,
+          price: 42.99,
           image: {
             url: 'https://i.imgur.com/Bbbm2Rw.png',
             alt: 'Cacto florido em um vaso em formato de xícara',
