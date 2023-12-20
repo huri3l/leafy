@@ -33,6 +33,7 @@ const config: Config = {
         'expand-full': 'expand-100 0.3s linear forwards',
         'expand-bottom-full': 'expand-bottom-100 3s linear forwards',
         'expand-bottom-3/4': 'expand-bottom-3/4 0.2s linear forwards',
+        'expand-bottom-35-percent': 'expand-bottom-35 0.2s linear forwards',
       },
       keyframes: {
         'fade-in': {
@@ -63,6 +64,19 @@ const config: Config = {
           '100%': {
             float: 'top',
             height: '100%',
+            opacity: '1',
+          },
+        },
+        'expand-bottom-35': {
+          '0%': {
+            float: 'top',
+            height: '0',
+            opacity: '0',
+          },
+          '5%': { opacity: '1' },
+          '100%': {
+            float: 'top',
+            height: '35%',
             opacity: '1',
           },
         },

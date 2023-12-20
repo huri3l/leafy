@@ -1,7 +1,6 @@
 import { Filter } from '@/components/Product/Filter';
 import { ProductList } from '@/components/Product/ProductList';
 import { Sort } from '@/components/Product/Sort';
-import { useFilter } from '@/hooks/useFilter';
 import { getCategory } from '@/sdk/categoria';
 import { getFilterOptionsFromProducts } from '@/sdk/lib/filter';
 
