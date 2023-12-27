@@ -10,7 +10,7 @@ export const Footer = () => {
           <strong>você</strong>
         </p>
       </div>
-      <div className="flex gap-3 items-center">
+      {/* <div className="flex gap-3 items-center">
         <Instagram className="h-7 w-7" />
         <Youtube className="h-9 w-9" />
       </div>
@@ -20,7 +20,7 @@ export const Footer = () => {
           <li>E-mail</li>
           <li>WhatsApp</li>
         </ul>
-      </div>
+      </div> */}
     </footer>
   );
 };
