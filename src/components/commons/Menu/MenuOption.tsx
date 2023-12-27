@@ -3,14 +3,21 @@ import { Icon, IconName } from '../Icon';
 import Link from 'next/link';
 import { cn } from '@/sdk/lib/style';
 import { AccordionTrigger } from '../Accordion/AccordionTrigger';
+import { HTMLAttributeAnchorTarget } from 'react';
+import { DialogClose } from '@radix-ui/react-dialog';
+
+type LinkType = {
+  url: string;
+  target?: HTMLAttributeAnchorTarget;
+};
 
 export type TMenuOption = {
   icon: IconName;
   name: string;
-  link?: string;
+  link?: LinkType;
   subItems?: {
     label: string;
-    link: string;
+    link: LinkType;
   }[];
 };
 
@@ -24,10 +31,16 @@ export const MenuOption = ({ subItems, ...props }: TMenuOption) => {
 
 const SimpleMenuOption = ({ icon, name, link }: TMenuOption) => {
   return (
-    <Link href={link ?? ''} className="flex gap-2.5 items-center my-2 cursor-pointer">
-      <Icon name={icon} className="stroke-lf-gray-400 w-6 h-6" />
-      <span className="text-lf-gray-600 text-lg">{name}</span>
-    </Link>
+    <DialogClose asChild>
+      <Link
+        href={link?.url ?? ''}
+        className="flex gap-2.5 items-center my-2 cursor-pointer"
+        target={link?.target}
+      >
+        <Icon name={icon} className="stroke-lf-gray-400 w-6 h-6" />
+        <span className="text-lf-gray-600 text-lg">{name}</span>
+      </Link>
+    </DialogClose>
   );
 };
 
@@ -47,11 +60,15 @@ const CollapsibleMenuOption = ({ icon, name, subItems }: TMenuOption) => {
           <div className="bg-lf-gray-300 w-0.5 h-full mx-auto" />
         </div>
         <div className={cn('AccordionContentText', 'flex flex-col pt-2 gap-0.5')}>
-          {subItems?.map(({ label, link }, idx) => (
-            <Link href={link} key={label + idx} className="text-lf-gray-600">
-              {label}
-            </Link>
-          ))}
+          {subItems?.map(({ label, link }, idx) => {
+            return (
+              <DialogClose key={label + idx} asChild>
+                <Link href={link?.url ?? ''} className="text-lf-gray-600" target={link?.target}>
+                  {label}
+                </Link>
+              </DialogClose>
+            );
+          })}
         </div>
       </Accordion.Content>
     </div>

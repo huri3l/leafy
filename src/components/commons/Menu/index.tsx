@@ -7,64 +7,33 @@ import { AccountSection } from './AccountSection';
 export const Menu = () => {
   const staticMenuItems: TMenuOption[] = [
     {
-      name: 'Em alta',
-      icon: 'Flame',
-      link: '/c/em-alta',
-    },
-    {
       name: 'Categorias',
       icon: 'Flower',
       subItems: [
         {
           label: 'Cactos',
-          link: '/c/cactos',
-        },
-        {
-          label: 'Flores',
-          link: '/c/flores',
-        },
-        {
-          label: 'Vasos',
-          link: '/c/vasos',
-        },
-        {
-          label: 'Sementes',
-          link: '/c/sementes',
+          link: {
+            url: '/categoria/cactos',
+          },
         },
         {
           label: 'Decorativas',
-          link: '/c/decorativas',
+          link: {
+            url: '/categoria/plantas-decorativas',
+          },
         },
         {
           label: 'Naturais',
-          link: '/c/naturais',
+          link: {
+            url: '/categoria/plantas-naturais',
+          },
         },
       ],
     },
     {
-      name: 'Sacola',
-      icon: 'ShoppingBag',
-      link: '/sacola',
-    },
-    {
-      name: 'Brindes',
-      icon: 'Gift',
-      link: '/brindes',
-    },
-    {
-      name: 'Fale conosco',
-      icon: 'Phone',
-      link: '/fale-conosco',
-    },
-    {
-      name: 'Conheça a Leafy',
-      icon: 'Leaf',
-      link: '/conheca-a-leafy',
-    },
-    {
       name: 'GitHub',
       icon: 'Github',
-      link: 'https://github.com/huri3l/leafy',
+      link: { url: 'https://github.com/huri3l/leafy', target: '_blank' },
     },
   ];
 
