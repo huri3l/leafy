@@ -1,0 +1,60 @@
+{
+  "images": [
+    {
+      "url": "https://i.imgur.com/jISSPj5.png",
+      "alt": "Cacto em um palito de picolé"
+    }
+  ],
+  "name": "Picolé de Cacto",
+  "price": {
+    "value": 89.9
+  },
+  "description": [
+    {
+      "text": [
+        { "heading5": "Refrescância na Decoração" },
+        { "regular": "Apresentamos o " },
+        { "bold": "Picolé de Cacto" },
+        {
+          "regular": ", uma escolha refrescante e decorativa que adiciona um charme único aos seus espaços."
+        },
+        "line_break",
+        "line_break",
+        { "bold": "Características Divertidas:" }
+      ]
+    },
+    {
+      "unordered_list": [
+        "Design Cilíndrico em Formato de Picolé: Este cacto é mais do que uma planta, é uma declaração de estilo com seu formato inusitado",
+        "Palito de Picolé: Fixado elegantemente, o palito adiciona um toque lúdico ao conjunto, fazendo referência ao universo dos picolés",
+        "Decorativo, Não Consumível: Embora pareça delicioso, este picolé é estritamente decorativo e não é destinado ao consumo humano",
+        "Popularidade Crescente: Tornou-se uma escolha querida para decoradores e amantes de plantas que buscam algo único e divertido"
+      ]
+    },
+    "line_break",
+    {
+      "text": ["line_break", { "bold": "Especificações do Produto:" }]
+    },
+    {
+      "unordered_list": [
+        "Altura Total: 25 cm (incluindo cacto e palito)",
+        "Vaso: Estilizado para complementar o tema de picolé"
+      ]
+    },
+    "line_break",
+    {
+      "text": [{ "bold": "Conteúdo da Embalagem:" }]
+    },
+    {
+      "unordered_list": ["1 Picolé de Cacto Decorativo"]
+    },
+    "line_break",
+    {
+      "text": [
+        {
+          "regular": "Adoce seus espaços com o Picolé de Cacto. Compre o seu hoje e transforme a decoração da sua casa com esse toque de frescor e diversão."
+        }
+      ]
+    }
+  ]
+}

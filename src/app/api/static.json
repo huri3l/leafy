@@ -40,16 +40,16 @@
         "price": 52.9,
         "image": {
           "url": "https://i.imgur.com/L0YaEEM.png",
-          "alt": "Cacto duplo em um potinho"
+          "alt": "Cacto duplo em um vasinho"
         }
       },
       {
-        "slug": "planta-decorativa",
-        "name": "Planta Decorativa",
+        "slug": "pinheiro-decorativo",
+        "name": "Pinheiro Decorativo",
         "price": 45.99,
         "image": {
           "url": "https://i.imgur.com/AAs1dGQ.png",
-          "alt": "Planta decorativa linda com um potinho"
+          "alt": "Pinheiro decorativo lindo com um vasinho"
         }
       }
     ]
@@ -69,12 +69,12 @@
         }
       },
       {
-        "slug": "cacto-com-pote",
-        "name": "Cacto com Pote",
+        "slug": "cacto-com-vaso",
+        "name": "Cacto com Vaso",
         "price": 36.99,
         "image": {
           "url": "https://i.imgur.com/c1F15nn.png",
-          "alt": "Cacto pequeno em um pote laranja"
+          "alt": "Cacto pequeno em um vaso laranja"
         }
       },
       {
@@ -83,7 +83,7 @@
         "price": 52.9,
         "image": {
           "url": "https://i.imgur.com/L0YaEEM.png",
-          "alt": "Cacto duplo em um potinho"
+          "alt": "Cacto duplo em um vasinho"
         }
       }
     ]
@@ -104,7 +104,7 @@
           "title": "Plantas Naturais",
           "description": "Para você que gosta de cuidar",
           "image": "https://i.imgur.com/9O9W932.png",
-          "link": "/categoria/plantas-decorativas"
+          "link": "/categoria/plantas-naturais"
         }
       ]
     }

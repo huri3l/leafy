@@ -1,0 +1,38 @@
+{
+  "name": "Plantas Decorativas",
+  "main": {
+    "title": "Se apaixone pelo nosso acervo de Plantas Decorativas",
+    "description": "Possuimos diversos tipos de plantas para você decorar sua casa, seu escritório e todo lugar que imaginar!"
+  },
+  "products": [
+    {
+      "tags": ["Categorias-Cacto"],
+      "slug": "picole-de-cacto",
+      "name": "Picolé de Cacto",
+      "price": 89.9,
+      "image": {
+        "url": "https://i.imgur.com/jISSPj5.png",
+        "alt": "Cacto em um palito de picolé"
+      }
+    },
+    {
+      "tags": ["Categorias-Cacto", "Acompanhamentos-Vaso Exclusivo", "Detalhes-Florido"],
+      "slug": "cacto-em-uma-chaleira",
+      "name": "Cacto em Chaleira",
+      "price": 109.9,
+      "image": {
+        "url": "https://i.imgur.com/sIRcyIz.png",
+        "alt": "Cacto dentro de uma mini chaleira rosé"
+      }
+    },
+    {
+      "slug": "pinheiro-decorativo",
+      "name": "Pinheiro Decorativo",
+      "price": 45.99,
+      "image": {
+        "url": "https://i.imgur.com/AAs1dGQ.png",
+        "alt": "Pinheiro decorativo lindo com um vasinho"
+      }
+    }
+  ]
+}

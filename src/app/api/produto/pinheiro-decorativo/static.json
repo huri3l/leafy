@@ -1,0 +1,74 @@
+{
+  "images": [
+    {
+      "url": "https://i.imgur.com/AAs1dGQ.png",
+      "alt": "Pinheiro decorativo lindo com um vasinho"
+    }
+  ],
+  "name": "Pinheiro Decorativo",
+  "price": {
+    "value": 45.99
+  },
+  "description": [
+    {
+      "text": [
+        {"heading5": "Natureza sem Compromisso"},
+        {"regular": "Adicione um toque de serenidade e sofisticação à sua decoração com o "},
+        {"bold": "Pinheiro Decorativo Artesanal"},
+        {"regular": ". Este pinheiro encantador não é apenas uma peça decorativa; é uma obra de arte artesanal projetada para trazer a beleza da natureza para os seus espaços."},
+        "line_break",
+        "line_break",
+        {"bold": "Características Distintivas:"}
+      ]
+    },
+    {
+      "unordered_list": [
+        "Design Artesanal: Cada detalhe deste pinheiro foi meticulosamente criado à mão, garantindo uma peça única e cheia de charme",
+        "Tamanho Compacto: Com uma altura sutil e um perfil fino, este pinheiro é perfeito para enfeitar estantes, mesas ou qualquer espaço que exija um toque de elegância vertical",
+        "Material Durável: Feito de materiais de alta qualidade, este pinheiro decorativo é durável e resistente, mantendo sua beleza ao longo do tempo",
+        "Vasinho Incluso: Apresentado em um pequeno vasinho, o pinheiro adiciona um toque extra de estilo, tornando-se um ponto focal instantâneo em qualquer ambiente."
+      ]
+    },
+    {
+      "text": [
+        "line_break",
+        {"bold": "Como Incorporar o Pinheiro Decorativo em sua Decoração:"}
+      ]
+    },
+    {
+      "unordered_list": [
+        "Centro de Mesa: Coloque-o como peça central em sua mesa de jantar para uma atmosfera acolhedora e festiva",
+        "Estilo Minimalista: Destaque o pinheiro em uma prateleira ou mesa de centro para um toque de natureza em um ambiente minimalista",
+        "Decoração de Festas: Ideal para decorar espaços festivos, trazendo o espírito natalino ou festivo de forma elegante."
+      ]
+    },
+    "line_break",
+    {
+      "text": [
+        "line_break",
+        {"bold": "Especificações do Produto:"}
+      ]
+    },
+    {
+      "unordered_list": [
+        "Altura Total: 40 cm (incluindo vasinho)",
+        "Material: Artesanalmente produzido com materiais de qualidade"
+      ]
+    },
+    "line_break",
+    {
+      "text": [
+        {"bold": "Conteúdo da Embalagem:"}
+      ]
+    },
+    {
+      "unordered_list": ["1 Pinheiro Decorativo Artesanal", "1 Vasinho Decorativo"]
+    },
+    "line_break",
+    {
+      "text": [
+        {"regular": "Transforme seu espaço com a atemporalidade e a beleza do Pinheiro Decorativo Artesanal. Adquira o seu hoje e adicione um toque de natureza à sua decoração de maneira única e artística."}
+      ]
+    }
+  ]
+}

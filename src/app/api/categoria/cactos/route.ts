@@ -1,5 +1,5 @@
-import category from './static.json';
+import cactos from './static.json';
 
 export async function GET() {
-  return Response.json(category);
+  return Response.json(cactos);
 }
