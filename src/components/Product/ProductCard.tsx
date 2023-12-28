@@ -15,9 +15,17 @@ interface ProductCardProps {
     alt: string;
   };
   className?: string;
+  priority?: boolean;
 }
 
-export const ProductCard = ({ name, link, price, image, className }: ProductCardProps) => {
+export const ProductCard = ({
+  name,
+  link,
+  price,
+  image,
+  priority = false,
+  className,
+}: ProductCardProps) => {
   return (
     <div className={className}>
       <div className="flex flex-col rounded-lg bg-white h-full">
@@ -31,6 +39,7 @@ export const ProductCard = ({ name, link, price, image, className }: ProductCard
               height={0}
               sizes="100vw"
               className="w-full h-full flex-[1_0_100%] rounded-t-lg object-cover"
+              priority={priority}
             />
           </Link>
         </div>

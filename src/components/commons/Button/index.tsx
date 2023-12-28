@@ -1,5 +1,5 @@
 import { cn } from '@/sdk/lib/style';
-import { ComponentProps, ElementType } from 'react';
+import { ComponentProps, ElementType, forwardRef } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
 
 const button = tv({
@@ -33,18 +33,22 @@ type TButtonProps = ComponentProps<'button'> &
     };
   };
 
-export const Button = ({ children, className, icon, ...props }: TButtonProps) => {
-  const Icon = icon?.render;
-  const position = icon?.position;
+export const Button = forwardRef<HTMLButtonElement, TButtonProps>(
+  ({ children, className, icon, ...props }, ref) => {
+    const Icon = icon?.render;
+    const position = icon?.position;
 
-  return (
-    <button
-      className={cn(button(props), 'flex items-center justify-center gap-1', className)}
-      {...props}
-    >
-      {icon && Icon && position === 'left' && <Icon className="w-5 h-5" />}
-      {children}
-      {icon && Icon && position === 'right' && <Icon className="w-5 h-5" />}
-    </button>
-  );
-};
+    return (
+      <button
+        className={cn(button(props), 'flex items-center justify-center gap-1', className)}
+        {...props}
+      >
+        {icon && Icon && position === 'left' && <Icon className="w-5 h-5" />}
+        {children}
+        {icon && Icon && position === 'right' && <Icon className="w-5 h-5" />}
+      </button>
+    );
+  },
+);
+
+Button.displayName = 'Button';

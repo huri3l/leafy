@@ -36,7 +36,12 @@ export const ProductList = ({ rawProductList }: ProductListProps) => {
   return (
     <div className="flex flex-wrap justify-center gap-4">
       {products.map((product, idx) => (
-        <ProductCard key={product.name + idx} {...product} className="flex-[0_0_47%]" />
+        <ProductCard
+          key={product.name + idx}
+          {...product}
+          className="flex-[0_0_47%]"
+          priority={idx === 0}
+        />
       ))}
     </div>
   );

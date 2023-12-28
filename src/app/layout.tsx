@@ -1,15 +1,7 @@
 import { Footer } from '@/components/Footer';
-import './globals.css';
 import { Header } from '@/components/commons/Header';
-import { cn } from '@/sdk/lib/style';
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '500', '700'],
-  fallback: ['system-ui', 'arial'],
-});
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Leafy',
@@ -19,12 +11,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body
-        className={cn(
-          'bg-lf-gray-100 text-lf-gray-800 min-h-screen flex flex-col justify-between',
-          poppins.className,
-        )}
-      >
+      <body className="font-sans bg-lf-gray-100 text-lf-gray-800 min-h-screen flex flex-col justify-between">
         <div>
           <Header />
           <div>{children}</div>
