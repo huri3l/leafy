@@ -1,4 +1,4 @@
-import { ShoppingBag } from 'lucide-react';
+import { Search, ShoppingBag } from 'lucide-react';
 import { SearchField } from './SearchField';
 import { useCallback } from 'react';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ type THeaderNavProps = {
 };
 
 export const HeaderNav = ({ isSearching, setIsSearching }: THeaderNavProps) => {
-  // const showSearchField = useCallback(() => setIsSearching(true), []);
+  const showSearchField = useCallback(() => setIsSearching(true), []);
   const closeSearchField = useCallback(() => setIsSearching(false), []);
 
   return (
@@ -22,9 +22,9 @@ export const HeaderNav = ({ isSearching, setIsSearching }: THeaderNavProps) => {
           <Link href="/sacola">
             <ShoppingBag className="w-7 h-7 stroke-lf-gray-600" />
           </Link>
-          {/* <button onClick={showSearchField}>
+          <button onClick={showSearchField}>
             <Search className="w-7 h-7 stroke-lf-gray-600" />
-          </button> */}
+          </button>
         </>
       )}
       <Menu />
