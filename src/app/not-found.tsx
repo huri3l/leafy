@@ -7,7 +7,9 @@ export default function NotFound() {
   return (
     <main className="flex flex-col gap-6 justify-center items-center mt-24">
       <strong className="text-center">
-        Não encontramos essa página. Clique no botão abaixo para retornar para a Página Inicial
+        Essa página ainda está em desenvolvimento.
+        <br />
+        Agradecemos sua compreensão.
       </strong>
       <Link href="/">
         <Button
