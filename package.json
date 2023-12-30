@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@prismicio/client": "^7.3.1",
+    "@prismicio/next": "^1.5.0",
+    "@prismicio/react": "^2.7.3",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-dialog": "^1.0.4",
     "@types/node": "20.5.8",
@@ -32,7 +36,9 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.31",
     "@svgr/webpack": "^8.1.0",
-    "@types/lodash": "^4.14.202"
+    "@types/lodash": "^4.14.202",
+    "slice-machine-ui": "^1.22.1"
   }
 }

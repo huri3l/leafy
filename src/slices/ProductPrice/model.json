@@ -1,0 +1,76 @@
+{
+  "id": "product_price",
+  "type": "SharedSlice",
+  "name": "ProductPrice",
+  "description": "ProductPrice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "Price",
+            "placeholder": ""
+          }
+        },
+        "details": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Details",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "priceWithDiscount",
+      "name": "Price with discount",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "Price",
+            "placeholder": ""
+          }
+        },
+        "details": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Details",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "old_price": {
+          "type": "Number",
+          "config": {
+            "label": "Old Price",
+            "placeholder": ""
+          }
+        },
+        "discount_amount": {
+          "type": "Number",
+          "config": {
+            "label": "Discount Amount",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

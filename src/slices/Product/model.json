@@ -1,0 +1,125 @@
+{
+  "id": "product_carousel",
+  "type": "SharedSlice",
+  "name": "Product",
+  "description": "ProductCarousel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Carousel",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "preview": {
+          "type": "Image",
+          "config": {
+            "label": "Preview",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": ""
+          }
+        },
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "Price",
+            "placeholder": ""
+          }
+        },
+        "slug": {
+          "type": "Text",
+          "config": {
+            "label": "Slug",
+            "placeholder": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "list",
+      "name": "List",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "preview": {
+          "type": "Image",
+          "config": {
+            "label": "Preview",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": ""
+          }
+        },
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "Price",
+            "placeholder": ""
+          }
+        },
+        "tags": {
+          "type": "Text",
+          "config": {
+            "label": "Tags",
+            "placeholder": "Grouped by -, separated by ,"
+          }
+        },
+        "slug": {
+          "type": "Text",
+          "config": {
+            "label": "Slug",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

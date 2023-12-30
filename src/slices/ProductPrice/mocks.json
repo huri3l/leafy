@@ -1,0 +1,63 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"price": {
+				"__TYPE__": "FieldContent",
+				"value": "61",
+				"type": "Number"
+			},
+			"details": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco ad minim sint incididunt eiusmod. Quis irure occaecat laborum enim excepteur eu sit ut."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "priceWithDiscount",
+		"primary": {
+			"price": {
+				"__TYPE__": "FieldContent",
+				"value": "57",
+				"type": "Number"
+			},
+			"details": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aliqua cupidatat sunt exercitation reprehenderit velit do ipsum ipsum ut. Officia exercitation non duis. Veniam sint deserunt ullamco pariatur nisi labore excepteur id nostrud dolor laboris excepteur elit eu."
+						}
+					}
+				]
+			},
+			"old_price": {
+				"__TYPE__": "FieldContent",
+				"value": "20",
+				"type": "Number"
+			},
+			"discount_amount": {
+				"__TYPE__": "FieldContent",
+				"value": "1",
+				"type": "Number"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
