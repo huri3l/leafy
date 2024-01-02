@@ -1,8 +1,8 @@
-import { TFormattedHomeItem } from '@/sdk/home/types';
 import { getSection } from './getSection';
+import { THomeSection } from '@/sdk/content/home/types';
 
 type TSectionHandler = {
-  section: TFormattedHomeItem;
+  section: THomeSection;
 };
 
 export const SectionHandler = ({ section }: TSectionHandler) => {

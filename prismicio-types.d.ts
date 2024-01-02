@@ -588,6 +588,17 @@ export interface CategorySliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   description: prismic.KeyTextField;
+
+  /**
+   * See More field in *Category → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: category.primary.see_more
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  see_more: prismic.BooleanField;
 }
 
 /**
@@ -623,6 +634,16 @@ export interface CategorySliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   description: prismic.KeyTextField;
+
+  /**
+   * Redirect To field in *Category → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: category.items[].redirect_to
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  redirect_to: prismic.LinkField;
 }
 
 /**
@@ -656,6 +677,56 @@ export type CategorySlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *KnowUs → Primary*
+ */
+export interface KnowUsSliceDefaultPrimary {
+  /**
+   * TItle field in *KnowUs → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: know_us.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Image field in *KnowUs → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: know_us.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Search Placeholder field in *KnowUs → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: know_us.primary.search_placeholder
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  search_placeholder: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *KnowUs → Items*
+ */
+export interface KnowUsSliceDefaultItem {
+  /**
+   * Statistic field in *KnowUs → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: know_us.items[].statistic
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  statistic: prismic.RichTextField;
+}
+
+/**
  * Default variation for KnowUs Slice
  *
  * - **API ID**: `default`
@@ -664,8 +735,8 @@ export type CategorySlice = prismic.SharedSlice<
  */
 export type KnowUsSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
-  never
+  Simplify<KnowUsSliceDefaultPrimary>,
+  Simplify<KnowUsSliceDefaultItem>
 >;
 
 /**
@@ -830,6 +901,16 @@ export interface ProductCarouselSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   slug: prismic.KeyTextField;
+
+  /**
+   * Redirect To field in *Product → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_carousel.items[].redirect_to
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  redirect_to: prismic.LinkField;
 }
 
 /**
@@ -1110,6 +1191,8 @@ declare module "@prismicio/client" {
       CategorySliceVariation,
       CategorySliceDefault,
       KnowUsSlice,
+      KnowUsSliceDefaultPrimary,
+      KnowUsSliceDefaultItem,
       KnowUsSliceVariation,
       KnowUsSliceDefault,
       MenuItemWithSubitemsSlice,

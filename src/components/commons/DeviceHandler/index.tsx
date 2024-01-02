@@ -1,14 +1,16 @@
 import { ReactNode } from 'react';
 import { DesktopWarning } from './DesktopWarning';
+import { cn } from '@/sdk/lib/style';
 
 type DeviceHandlerProps = {
+  className?: string;
   children: ReactNode;
 };
 
-export const DeviceHandler = ({ children }: DeviceHandlerProps) => {
+export const DeviceHandler = ({ className, children }: DeviceHandlerProps) => {
   return (
     <>
-      <div className="md:hidden">{children}</div>
+      <div className={cn(className, 'md:hidden')}>{children}</div>
       <div className="hidden md:flex">
         <DesktopWarning />
       </div>

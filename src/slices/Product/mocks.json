@@ -67,6 +67,16 @@
 							"value": "tired",
 							"type": "Text"
 						}
+					],
+					[
+						"redirect_to",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://slicemachine.dev"
+							}
+						}
 					]
 				]
 			}

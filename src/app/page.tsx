@@ -1,8 +1,9 @@
 import { SectionHandler } from '@/components/sections/SectionHandler';
+import { getHome } from '@/sdk/content/home';
 import { getHomeSections } from '@/sdk/home';
 
 export default async function Home() {
-  const sections = await getHomeSections();
+  const sections = await getHome();
 
   return (
     <main className="space-y-16 p-4">

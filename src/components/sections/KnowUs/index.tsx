@@ -1,6 +1,8 @@
 'use client';
 import { TextInput } from '@/components/commons/Input/Text';
+import { TKnowUsSection } from '@/sdk/content/home/types';
 import { TFormattedKnowUs } from '@/sdk/home/types';
+import { PrismicRichText } from '@prismicio/react';
 import { Search } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -11,7 +13,7 @@ type TForm = {
 };
 
 export type TKnowUsProps = {
-  data: TFormattedKnowUs;
+  data: TKnowUsSection;
 };
 
 export const KnowUs = ({ data }: TKnowUsProps) => {
@@ -29,12 +31,22 @@ export const KnowUs = ({ data }: TKnowUsProps) => {
         <div className="w-fit space-y-3">
           <strong className="text-xl">{title}</strong>
           <div className="flex gap-5 items-center">
-            {statistics.map(({ qty, type }, idx) => (
-              <div key={type + idx} className="flex gap-5 items-center">
+            {statistics.map((statistic, idx) => (
+              <div key={idx} className="flex gap-5 items-center">
                 {idx > 0 && <div className="w-[2px] h-10 bg-lf-gray-900" />}
                 <div className="flex flex-col gap-0.5">
-                  <strong className="text-lg">{qty}</strong>
-                  <span>{type}</span>
+                  <PrismicRichText
+                    key={idx}
+                    field={statistic}
+                    components={{
+                      strong: ({ children }) => (
+                        <>
+                          <strong>{children}</strong>
+                          <br />
+                        </>
+                      ),
+                    }}
+                  />
                 </div>
               </div>
             ))}

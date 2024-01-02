@@ -25,6 +25,15 @@
             "label": "Description",
             "placeholder": ""
           }
+        },
+        "see_more": {
+          "type": "Boolean",
+          "config": {
+            "label": "See More",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
         }
       },
       "items": {
@@ -48,6 +57,14 @@
           "config": {
             "label": "Description",
             "placeholder": ""
+          }
+        },
+        "redirect_to": {
+          "type": "Link",
+          "config": {
+            "label": "Redirect To",
+            "placeholder": "",
+            "select": null
           }
         }
       }

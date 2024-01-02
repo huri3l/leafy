@@ -37,14 +37,6 @@ export type TAboutUs = {
   description: string;
 };
 
-export type TGift = {
-  icon: string;
-  title: string;
-  subtitle: string;
-  image: string;
-  description: string;
-};
-
 type THomeItem =
   | {
       name: 'know_us';
