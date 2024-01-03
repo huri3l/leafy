@@ -140,16 +140,16 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
         d="M173.937 82.325C167.967 82.343 162.208 80.1167 157.802 76.0874C153.397 72.0581 150.667 66.5202 150.153 60.5721C149.64 54.6241 151.38 48.7002 155.03 43.9755C158.68 39.2508 163.972 36.0704 169.857 35.065C189.237 31.325 194.337 29.557 201.137 21.125C204.537 27.925 207.937 35.337 207.937 48.325C207.937 67.025 191.685 82.325 173.937 82.325Z"
         fill="#A6D189"
         stroke="#3C3C3C"
-        stroke-width="6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M139.937 85.725C139.937 75.525 147.371 67.501 160.349 65.325C170.073 63.693 180.119 58.525 184.137 55.125"
         stroke="#3C3C3C"
-        stroke-width="6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M133.388 127.248H141.452V132H127.232V106.728H133.388V127.248ZM163.324 121.632C163.324 122.208 163.288 122.808 163.216 123.432H149.284C149.38 124.68 149.776 125.64 150.472 126.312C151.192 126.96 152.068 127.284 153.1 127.284C154.636 127.284 155.704 126.636 156.304 125.34H162.856C162.52 126.66 161.908 127.848 161.02 128.904C160.156 129.96 159.064 130.788 157.744 131.388C156.424 131.988 154.948 132.288 153.316 132.288C151.348 132.288 149.596 131.868 148.06 131.028C146.524 130.188 145.324 128.988 144.46 127.428C143.596 125.868 143.164 124.044 143.164 121.956C143.164 119.868 143.584 118.044 144.424 116.484C145.288 114.924 146.488 113.724 148.024 112.884C149.56 112.044 151.324 111.624 153.316 111.624C155.26 111.624 156.988 112.032 158.5 112.848C160.012 113.664 161.188 114.828 162.028 116.34C162.892 117.852 163.324 119.616 163.324 121.632ZM157.024 120.012C157.024 118.956 156.664 118.116 155.944 117.492C155.224 116.868 154.324 116.556 153.244 116.556C152.212 116.556 151.336 116.856 150.616 117.456C149.92 118.056 149.488 118.908 149.32 120.012H157.024ZM165.348 121.92C165.348 119.856 165.732 118.044 166.5 116.484C167.292 114.924 168.36 113.724 169.704 112.884C171.048 112.044 172.548 111.624 174.204 111.624C175.62 111.624 176.856 111.912 177.912 112.488C178.992 113.064 179.82 113.82 180.396 114.756V111.912H186.552V132H180.396V129.156C179.796 130.092 178.956 130.848 177.876 131.424C176.82 132 175.584 132.288 174.168 132.288C172.536 132.288 171.048 131.868 169.704 131.028C168.36 130.164 167.292 128.952 166.5 127.392C165.732 125.808 165.348 123.984 165.348 121.92ZM180.396 121.956C180.396 120.42 179.964 119.208 179.1 118.32C178.26 117.432 177.228 116.988 176.004 116.988C174.78 116.988 173.736 117.432 172.872 118.32C172.032 119.184 171.612 120.384 171.612 121.92C171.612 123.456 172.032 124.68 172.872 125.592C173.736 126.48 174.78 126.924 176.004 126.924C177.228 126.924 178.26 126.48 179.1 125.592C179.964 124.704 180.396 123.492 180.396 121.956ZM201.085 117.024H197.773V132H191.617V117.024H189.385V111.912H191.617V111.336C191.617 108.864 192.325 106.992 193.741 105.72C195.157 104.424 197.233 103.776 199.969 103.776C200.425 103.776 200.761 103.788 200.977 103.812V109.032C199.801 108.96 198.973 109.128 198.493 109.536C198.013 109.944 197.773 110.676 197.773 111.732V111.912H201.085V117.024ZM224.498 111.912L211.898 141.54H205.274L209.882 131.316L201.71 111.912H208.586L213.23 124.476L217.838 111.912H224.498Z"
@@ -164,8 +164,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint1_radial_750_15"
@@ -175,8 +175,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_750_15"
@@ -186,8 +186,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_750_15"
@@ -197,8 +197,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint4_radial_750_15"
@@ -208,8 +208,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint5_radial_750_15"
@@ -219,8 +219,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint6_radial_750_15"
@@ -230,8 +230,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint7_radial_750_15"
@@ -241,8 +241,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint8_radial_750_15"
@@ -252,8 +252,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint9_radial_750_15"
@@ -263,8 +263,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint10_radial_750_15"
@@ -274,8 +274,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint11_radial_750_15"
@@ -285,8 +285,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint12_radial_750_15"
@@ -296,8 +296,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint13_radial_750_15"
@@ -307,8 +307,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint14_radial_750_15"
@@ -318,8 +318,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint15_radial_750_15"
@@ -329,8 +329,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint16_radial_750_15"
@@ -340,8 +340,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint17_radial_750_15"
@@ -351,8 +351,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint18_radial_750_15"
@@ -362,8 +362,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint19_radial_750_15"
@@ -373,8 +373,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint20_radial_750_15"
@@ -384,8 +384,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint21_radial_750_15"
@@ -395,8 +395,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint22_radial_750_15"
@@ -406,8 +406,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint23_radial_750_15"
@@ -417,8 +417,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint24_radial_750_15"
@@ -428,8 +428,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint25_radial_750_15"
@@ -439,8 +439,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint26_radial_750_15"
@@ -450,8 +450,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint27_radial_750_15"
@@ -461,8 +461,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint28_radial_750_15"
@@ -472,8 +472,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint29_radial_750_15"
@@ -483,8 +483,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint30_radial_750_15"
@@ -494,8 +494,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint31_radial_750_15"
@@ -505,8 +505,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint32_radial_750_15"
@@ -516,8 +516,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint33_radial_750_15"
@@ -527,8 +527,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint34_radial_750_15"
@@ -538,8 +538,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint35_radial_750_15"
@@ -549,8 +549,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint36_radial_750_15"
@@ -560,8 +560,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint37_radial_750_15"
@@ -571,8 +571,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint38_radial_750_15"
@@ -582,8 +582,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint39_radial_750_15"
@@ -593,8 +593,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint40_radial_750_15"
@@ -604,8 +604,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint41_radial_750_15"
@@ -615,8 +615,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint42_radial_750_15"
@@ -626,8 +626,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint43_radial_750_15"
@@ -637,8 +637,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint44_radial_750_15"
@@ -648,8 +648,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint45_radial_750_15"
@@ -659,8 +659,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint46_radial_750_15"
@@ -670,8 +670,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint47_radial_750_15"
@@ -681,8 +681,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint48_radial_750_15"
@@ -692,8 +692,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint49_radial_750_15"
@@ -703,8 +703,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint50_radial_750_15"
@@ -714,8 +714,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint51_radial_750_15"
@@ -725,8 +725,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint52_radial_750_15"
@@ -736,8 +736,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint53_radial_750_15"
@@ -747,8 +747,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint54_radial_750_15"
@@ -758,8 +758,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 46) rotate(90) scale(119 204.937)"
         >
-          <stop stop-color="#A6D189" stop-opacity="0.5" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" stopOpacity="0.5" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint55_radial_750_15"
@@ -769,8 +769,8 @@ export function GriddedLeafy(props: ComponentProps<'svg'>) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(175.482 19) rotate(90) scale(116 131.053)"
         >
-          <stop stop-color="#A6D189" />
-          <stop offset="1" stop-color="#A6D189" stop-opacity="0" />
+          <stop stopColor="#A6D189" />
+          <stop offset="1" stopColor="#A6D189" stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>
