@@ -60,8 +60,8 @@ export const getProductPriceDetails = (price: TPrice): TRichText[] | undefined =
   }
 };
 
-export const getDiscountAmount = (price: TPrice) => {
-  return price?.promotion && `-${price?.promotion?.amount * 100}%`;
+export const getDiscountFormatted = (discount: number | undefined) => {
+  return discount ? `-${discount * 100}%` : undefined;
 };
 
 export const getCurrentPrice = (price: TPrice) => {

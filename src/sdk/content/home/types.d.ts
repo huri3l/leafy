@@ -1,9 +1,5 @@
-import { RichTextField } from '@prismicio/client';
-
-type TImage = {
-  url: string;
-  alt: string;
-};
+import { TRichText } from '@prismicio/client';
+import { TImage, TPrice } from '../common';
 
 export type TAboutUsSection = {
   icon: string;
@@ -14,7 +10,7 @@ export type TAboutUsSection = {
 export type TKnowUsSection = {
   title: string;
   image: TImage;
-  statistics: RichTextField[];
+  statistics: TRichText[];
   search?: string;
 };
 
@@ -31,10 +27,7 @@ export type TCategorySection = {
 export type TProductCarousel = {
   slug: string;
   name: string;
-  price: {
-    raw: number;
-    formatted: string;
-  };
+  price: TPrice;
   link: string;
   image: {
     url: string;
