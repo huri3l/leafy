@@ -1,6 +1,6 @@
 import data from '@/static/footer.json';
-import { RichText } from '../commons/RichText';
-import { TRichText } from '@/sdk/types';
+import { PrismicRichText } from '@prismicio/react';
+import { RichTextField } from '@prismicio/client';
 
 export const Footer = () => {
   return (
@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="flex flex-col items-center gap-4">
         <strong className="text-2xl">{data.title}</strong>
         <div className="text-center">
-          <RichText content={data.description as TRichText[]} />
+          <PrismicRichText field={data.description as RichTextField} />
         </div>
       </div>
     </footer>
