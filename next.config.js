@@ -8,7 +8,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['images.prismic.io'],
+    domains: ['images.prismic.io', 'i.imgur.com'],
   },
 };
 

@@ -81,173 +81,6 @@ export type CategoryDocument<Lang extends string = string> =
   >;
 
 /**
- * Item in *Footer → Items*
- */
-export interface FooterDocumentDataItemsItem {
-  /**
-   * Label field in *Footer → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.items[].label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  label: prismic.KeyTextField;
-
-  /**
-   * Link field in *Footer → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.items[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-}
-
-/**
- * Content for Footer documents
- */
-interface FooterDocumentData {
-  /**
-   * Title field in *Footer*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *Footer*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Items field in *Footer*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.items[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  items: prismic.GroupField<Simplify<FooterDocumentDataItemsItem>>;
-}
-
-/**
- * Footer document from Prismic
- *
- * - **API ID**: `footer`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type FooterDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<FooterDocumentData>,
-    "footer",
-    Lang
-  >;
-
-/**
- * Item in *Header → Items*
- */
-export interface HeaderDocumentDataItemsItem {
-  /**
-   * name field in *Header → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.items[].name
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name: prismic.KeyTextField;
-
-  /**
-   * Icon field in *Header → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.items[].icon
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  icon: prismic.KeyTextField;
-
-  /**
-   * Link field in *Header → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.items[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Role field in *Header → Items*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.items[].role
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  role: prismic.SelectField<"Search" | "Menu">;
-}
-
-/**
- * Content for Header documents
- */
-interface HeaderDocumentData {
-  /**
-   * Logo field in *Header*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.logo
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  logo: prismic.ImageField<never>;
-
-  /**
-   * Items field in *Header*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.items[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  items: prismic.GroupField<Simplify<HeaderDocumentDataItemsItem>>;
-}
-
-/**
- * Header document from Prismic
- *
- * - **API ID**: `header`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type HeaderDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<HeaderDocumentData>,
-    "header",
-    Lang
-  >;
-
-/**
  * Item in *Home → About Us*
  */
 export interface HomeDocumentDataAboutUsItem {
@@ -369,82 +202,6 @@ export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 /**
- * Item in *Menu → Items*
- */
-export interface MenuDocumentDataItemsItem {
-  /**
-   * Link field in *Menu → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: menu.items[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-
-  /**
-   * Icon field in *Menu → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: menu.items[].icon
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  icon: prismic.KeyTextField;
-
-  /**
-   * Label field in *Menu → Items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: menu.items[].label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  label: prismic.KeyTextField;
-}
-
-type MenuDocumentDataSlicesSlice = MenuItemWithSubitemsSlice;
-
-/**
- * Content for Menu documents
- */
-interface MenuDocumentData {
-  /**
-   * Items field in *Menu*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: menu.items[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  items: prismic.GroupField<Simplify<MenuDocumentDataItemsItem>>;
-
-  /**
-   * Slice Zone field in *Menu*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: menu.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<MenuDocumentDataSlicesSlice>;
-}
-
-/**
- * Menu document from Prismic
- *
- * - **API ID**: `menu`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type MenuDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<Simplify<MenuDocumentData>, "menu", Lang>;
-
-/**
  * Item in *Product Page → Images*
  */
 export interface ProductPageDocumentDataImagesItem {
@@ -559,10 +316,7 @@ export type ProductPageDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | CategoryDocument
-  | FooterDocument
-  | HeaderDocument
   | HomeDocument
-  | MenuDocument
   | ProductPageDocument;
 
 /**
@@ -1166,20 +920,10 @@ declare module "@prismicio/client" {
       CategoryDocument,
       CategoryDocumentData,
       CategoryDocumentDataSlicesSlice,
-      FooterDocument,
-      FooterDocumentData,
-      FooterDocumentDataItemsItem,
-      HeaderDocument,
-      HeaderDocumentData,
-      HeaderDocumentDataItemsItem,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataAboutUsItem,
       HomeDocumentDataSlicesSlice,
-      MenuDocument,
-      MenuDocumentData,
-      MenuDocumentDataItemsItem,
-      MenuDocumentDataSlicesSlice,
       ProductPageDocument,
       ProductPageDocumentData,
       ProductPageDocumentDataImagesItem,

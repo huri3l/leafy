@@ -1,0 +1,12 @@
+{
+  "title": "Leafy",
+  "description": [
+    {
+      "text": [
+        {"regular": "Todas as plantas para "},
+        "line_break",
+        {"bold": "você"}
+      ]
+    }
+  ]
+}

@@ -1,42 +1,11 @@
 import { Menu as MenuIcon } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { MenuOptionsContainer } from './MenuOptionsContainer';
+
+import data from '@/static/menu.json';
 import { TMenuOption } from './MenuOption';
-import { AccountSection } from './AccountSection';
 
 export const Menu = () => {
-  const staticMenuItems: TMenuOption[] = [
-    {
-      name: 'Categorias',
-      icon: 'Flower',
-      subItems: [
-        {
-          label: 'Cactos',
-          link: {
-            url: '/categoria/cactos',
-          },
-        },
-        {
-          label: 'Decorativas',
-          link: {
-            url: '/categoria/plantas-decorativas',
-          },
-        },
-        {
-          label: 'Naturais',
-          link: {
-            url: '/categoria/plantas-naturais',
-          },
-        },
-      ],
-    },
-    {
-      name: 'GitHub',
-      icon: 'Github',
-      link: { url: 'https://github.com/huri3l/leafy', target: '_blank' },
-    },
-  ];
-
   return (
     <Dialog.Root>
       <Dialog.Trigger className="group">
@@ -50,7 +19,7 @@ export const Menu = () => {
             <Dialog.Close>
               <MenuIcon className="w-7 h-7 stroke-lf-gray-600 shrink-0" />
             </Dialog.Close>
-            <MenuOptionsContainer items={staticMenuItems} />
+            <MenuOptionsContainer items={data as TMenuOption[]} />
           </div>
           {/* <AccountSection /> */}
         </div>
