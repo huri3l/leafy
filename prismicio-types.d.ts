@@ -758,6 +758,16 @@ export interface ProductCarouselSliceListItem {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   slug: prismic.KeyTextField;
+
+  /**
+   * Redirect To field in *Product → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_carousel.items[].redirect_to
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  redirect_to: prismic.LinkField;
 }
 
 /**

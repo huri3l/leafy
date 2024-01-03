@@ -7,11 +7,11 @@ import isEqual from 'lodash/isEqual';
 import { useSort } from '@/hooks/useSort';
 
 interface ProductListProps {
-  rawProductList: TFormattedProductCard[];
+  initialProductList: TFormattedProductCard[];
 }
 
-export const ProductList = ({ rawProductList }: ProductListProps) => {
-  const [products, setProducts] = useState<TFormattedProductCard[]>(rawProductList);
+export const ProductList = ({ initialProductList }: ProductListProps) => {
+  const [products, setProducts] = useState<TFormattedProductCard[]>(initialProductList);
   const { tagFilters, filterProducts } = useFilter();
   const { sortOption, sortProducts } = useSort();
 
@@ -19,9 +19,9 @@ export const ProductList = ({ rawProductList }: ProductListProps) => {
     let updatedProducts;
 
     if (tagFilters.length > 0) {
-      updatedProducts = filterProducts(rawProductList);
+      updatedProducts = filterProducts(initialProductList);
     } else {
-      updatedProducts = [...rawProductList];
+      updatedProducts = [...initialProductList];
     }
 
     if (sortOption) {

@@ -1,13 +1,15 @@
-import { TFormattedProductCard } from '../home/types';
+import { ProductCarouselSliceListItem } from '../../../prismicio-types';
 import { TFilterOption } from '../produto/types';
 
 export const getFilterOptionsFromProducts = (
-  products: TFormattedProductCard[],
+  products: ProductCarouselSliceListItem[],
   isCategoryPage = false,
 ): TFilterOption[] => {
   const options: TFilterOption[] = [];
 
-  products.forEach(({ tags }) => {
+  products.forEach(({ tags: strTags }) => {
+    const tags = strTags?.split(',');
+
     tags?.forEach((tag) => {
       const [title, value] = tag.split('-');
 

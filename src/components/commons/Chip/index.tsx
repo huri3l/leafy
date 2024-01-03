@@ -17,7 +17,11 @@ export const Chip = ({ children, onDelete }: ChipProps) => {
     >
       {children}
       {onDelete && (
-        <button className="w-fit h-fit rounded-full bg-lf-gray-200" onClick={onDelete}>
+        <button
+          type="button"
+          className="w-fit h-fit rounded-full bg-lf-gray-200"
+          onClick={onDelete}
+        >
           <X width={14} height={14} />
         </button>
       )}

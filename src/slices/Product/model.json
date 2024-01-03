@@ -126,6 +126,14 @@
             "label": "Slug",
             "placeholder": ""
           }
+        },
+        "redirect_to": {
+          "type": "Link",
+          "config": {
+            "label": "Redirect To",
+            "placeholder": "",
+            "select": null
+          }
         }
       }
     }
