@@ -22,7 +22,9 @@ export const getCategory = async (slug: string) => {
         },
         slug: String(item.slug),
         tags: item.tags?.split(',').map((item) => item.trim()),
-        link: cleanCmsLink(item.redirect_to, 'mix'),
+        link: cleanCmsLink(item.redirect_to, {
+          prefix: 'produto',
+        }),
       };
     }),
     filters: getFilterOptionsFromProducts(productList, true),

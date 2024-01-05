@@ -10,6 +10,19 @@ const nextConfig = {
   images: {
     domains: ['images.prismic.io', 'i.imgur.com'],
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/produto/:slug',
+        destination: '/product/:slug',
+      },
+      {
+        source: '/categoria/:slug',
+        destination: '/category/:slug',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

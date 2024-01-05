@@ -16,11 +16,20 @@ export const cleanCmsImage = (field: ImageField) => {
   };
 };
 
-export const cleanCmsLink = (link: LinkField, format: 'mix' | 'none' = 'none') => {
-  if (link.link_type === 'Document' && format === 'mix' && link.type && link.uid) {
-    return `/${link.type}/${link.uid}`;
-  } else if (link.link_type === 'Document' && format === 'none' && link.uid) {
-    return link.uid;
+export const cleanCmsLink = (
+  link: LinkField,
+  options?: {
+    prefix?: string;
+  },
+) => {
+  const isDocument = link.link_type === 'Document';
+
+  if (isDocument && options?.prefix) {
+    return `/${options.prefix}/${link.uid}`;
+  }
+
+  if (isDocument) {
+    return String(link.uid);
   }
 
   return String(asLink(link) ?? '');

@@ -30,7 +30,9 @@ export const getHome = async () => {
                   title: String(item.title),
                   description: String(item.description),
                   image: cleanCmsImage(item.preview),
-                  link: cleanCmsLink(item.redirect_to, 'mix'),
+                  link: cleanCmsLink(item.redirect_to, {
+                    prefix: 'categoria',
+                  }),
                 };
               }),
               seeMore: slice.primary.see_more,
@@ -50,7 +52,9 @@ export const getHome = async () => {
                   raw: Number(item.price),
                   formatted: formatPrice(Number(item.price)),
                 },
-                link: cleanCmsLink(item.redirect_to, 'mix'),
+                link: cleanCmsLink(item.redirect_to, {
+                  prefix: 'produto',
+                }),
               };
             }),
           };
