@@ -1,22 +1,21 @@
 'use client';
 import { TextInput } from '@/components/commons/Input/Text';
-import { TKnowUsSection } from '@/sdk/content/home/types';
-import { TFormattedKnowUs } from '@/sdk/home/types';
+import { TKnowUsSection } from '@/content/home/types';
 import { PrismicRichText } from '@prismicio/react';
 import { Search } from 'lucide-react';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 type TForm = {
   term: string;
 };
 
-export type TKnowUsProps = {
+type KnowUsProps = {
   data: TKnowUsSection;
 };
 
-export const KnowUs = ({ data }: TKnowUsProps) => {
+export const KnowUs = ({ data }: KnowUsProps) => {
   const { title, image, search, statistics } = data;
   const { register, handleSubmit } = useForm<TForm>();
   const router = useRouter();

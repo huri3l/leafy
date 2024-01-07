@@ -1,5 +1,4 @@
-import { TFormattedProductCard } from '@/sdk/home/types';
-import { TFilterOption } from '@/sdk/produto/types';
+import { TProductCard } from '@/content/types';
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
 export const useFilter = () => {
@@ -77,36 +76,7 @@ export const useFilter = () => {
     updateURL();
   };
 
-  const getFilterOptionsFromProducts = (
-    products: TFormattedProductCard[],
-    isCategoryPage = false,
-  ): TFilterOption[] => {
-    const options: TFilterOption[] = [];
-
-    products.forEach(({ tags }) => {
-      tags?.forEach((tag) => {
-        const [title, value] = tag.split('-');
-
-        const existingOption = options.find((option) => option.title === title);
-
-        if (existingOption) {
-          if (!existingOption.possibilities.includes(value)) {
-            existingOption.possibilities.push(value);
-          }
-        } else {
-          options.push({ title, possibilities: [value] });
-        }
-      });
-    });
-
-    if (isCategoryPage) {
-      return options.filter((option) => option.title !== 'Categorias');
-    }
-
-    return options;
-  };
-
-  const filterProducts = (products: TFormattedProductCard[]) => {
+  const filterProducts = (products: TProductCard[]) => {
     const _filterProductByPrice = (price: number) => {
       const from = Number(priceFilters.from);
       const to = Number(priceFilters.to);
@@ -146,6 +116,5 @@ export const useFilter = () => {
     removePriceFilter,
     removeAllFilters,
     filterProducts,
-    getFilterOptionsFromProducts,
   };
 };

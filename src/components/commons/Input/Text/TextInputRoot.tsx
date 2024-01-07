@@ -1,4 +1,4 @@
-import { cn } from '@/sdk/lib/style';
+import { cn } from '@/lib/style';
 import { forwardRef, ComponentProps } from 'react';
 
 type TextInputProps = ComponentProps<'input'>;

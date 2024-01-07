@@ -3,9 +3,9 @@ import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Dots } from './Dots';
 import { Arrows } from './Arrows';
-import { cn } from '@/sdk/lib/style';
+import { cn } from '@/lib/style';
 
-type TCarouselProps = PropsWithChildren &
+type CarouselProps = PropsWithChildren &
   EmblaOptionsType & {
     arrows?: boolean;
     dots?: {
@@ -30,7 +30,7 @@ export const Carousel = ({
   },
   className,
   ...options
-}: TCarouselProps) => {
+}: CarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
   const [selectedIndex, setSelectedIndex] = useState(0);

@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 import { X } from 'lucide-react';
-import { cn } from '@/sdk/lib/style';
+import { cn } from '@/lib/style';
 
-interface ChipProps {
+type ChipProps = {
   children: ReactNode;
   onDelete?: () => void;
-}
+};
 
 export const Chip = ({ children, onDelete }: ChipProps) => {
   return (

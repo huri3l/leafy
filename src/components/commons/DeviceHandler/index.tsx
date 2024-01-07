@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { DesktopWarning } from './DesktopWarning';
-import { cn } from '@/sdk/lib/style';
+import { cn } from '@/lib/style';
 
 type DeviceHandlerProps = {
   className?: string;

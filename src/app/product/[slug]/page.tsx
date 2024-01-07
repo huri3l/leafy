@@ -1,7 +1,7 @@
 import { ProductImages } from '@/components/Product/ProductImages';
 import { ProductMain } from '@/components/Product/ProductMain';
 import { Button } from '@/components/commons/Button';
-import { getProduct } from '@/sdk/content/product';
+import { getProduct } from '@/content/product';
 import { PrismicRichText } from '@prismicio/react';
 import { ShoppingBasket } from 'lucide-react';
 

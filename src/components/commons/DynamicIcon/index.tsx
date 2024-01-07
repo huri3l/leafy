@@ -5,11 +5,11 @@ import { Suspense } from 'react';
 
 export type IconName = keyof typeof dynamicIconImports;
 
-type TIconProps = LucideProps & {
+type IconProps = LucideProps & {
   name: IconName;
 };
 
-export const DynamicIcon = ({ name, ...props }: TIconProps) => {
+export const DynamicIcon = ({ name, ...props }: IconProps) => {
   const LucideIcon = dynamic(dynamicIconImports[name]);
 
   return (

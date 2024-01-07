@@ -1,6 +1,5 @@
-import { SectionHandler } from '@/components/sections/SectionHandler';
-import { getHome } from '@/sdk/content/home';
-import { getHomeSections } from '@/sdk/home';
+import { SectionContainer } from '@/components/sections/SectionContainer';
+import { getHome } from '@/content/home';
 
 export default async function Home() {
   const sections = await getHome();
@@ -8,7 +7,7 @@ export default async function Home() {
   return (
     <main className="space-y-16 p-4">
       {sections.map((section, idx) => (
-        <SectionHandler key={section.name + idx} section={section} />
+        <SectionContainer key={section.name + idx} section={section} />
       ))}
     </main>
   );

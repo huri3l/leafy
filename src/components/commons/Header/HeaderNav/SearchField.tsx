@@ -3,7 +3,7 @@ import { TextInput } from '../../Input/Text';
 import { useRouter } from 'next/navigation';
 import { X } from 'lucide-react';
 
-type TSearchFieldProps = {
+type SearchFieldProps = {
   onLeave: () => void;
 };
 
@@ -11,7 +11,7 @@ type TForm = {
   term: string;
 };
 
-export const SearchField = ({ onLeave }: TSearchFieldProps) => {
+export const SearchField = ({ onLeave }: SearchFieldProps) => {
   const { register, handleSubmit } = useForm<TForm>();
   const router = useRouter();
 

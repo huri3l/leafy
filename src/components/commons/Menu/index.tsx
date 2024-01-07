@@ -21,7 +21,6 @@ export const Menu = () => {
             </Dialog.Close>
             <MenuOptionsContainer items={data as TMenuOption[]} />
           </div>
-          {/* <AccountSection /> */}
         </div>
       </Dialog.Content>
     </Dialog.Root>

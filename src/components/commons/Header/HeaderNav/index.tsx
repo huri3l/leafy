@@ -4,12 +4,12 @@ import { useCallback } from 'react';
 import Link from 'next/link';
 import { Menu } from '../../Menu';
 
-type THeaderNavProps = {
+type HeaderNavProps = {
   isSearching: boolean;
   setIsSearching: (search: boolean) => void;
 };
 
-export const HeaderNav = ({ isSearching, setIsSearching }: THeaderNavProps) => {
+export const HeaderNav = ({ isSearching, setIsSearching }: HeaderNavProps) => {
   const showSearchField = useCallback(() => setIsSearching(true), []);
   const closeSearchField = useCallback(() => setIsSearching(false), []);
 

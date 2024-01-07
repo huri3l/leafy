@@ -1,12 +1,11 @@
 import { DynamicIcon } from '@/components/commons/DynamicIcon';
-import { Icon } from '@/components/commons/Icon';
-import { TAboutUs } from '@/sdk/home/types';
+import { TAboutUsSection } from '@/content/home/types';
 
-export type TAboutUsProps = {
-  data: TAboutUs[];
+type AboutUsProps = {
+  data: TAboutUsSection[];
 };
 
-export const AboutUs = ({ data }: TAboutUsProps) => {
+export const AboutUs = ({ data }: AboutUsProps) => {
   return (
     <div className="space-y-8 text-lf-gray-900">
       {data.map(({ icon, title, description }, idx) => (

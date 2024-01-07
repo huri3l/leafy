@@ -1,8 +1,8 @@
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/commons/Header';
-import type { Metadata } from 'next';
-import './globals.css';
 import { DeviceHandler } from '@/components/commons/DeviceHandler';
+import { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Leafy',

@@ -1,13 +1,13 @@
-import { cn } from '@/sdk/lib/style';
+import { cn } from '@/lib/style';
 
-type TArrowsProps = {
+type ArrowsProps = {
   canScrollPrev: boolean;
   canScrollNext: boolean;
   onPrev(): void;
   onNext(): void;
 };
 
-export const Arrows = ({ canScrollPrev, canScrollNext, onPrev, onNext }: TArrowsProps) => {
+export const Arrows = ({ canScrollPrev, canScrollNext, onPrev, onNext }: ArrowsProps) => {
   return (
     <div className="flex justify-end gap-2 ">
       <button

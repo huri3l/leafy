@@ -1,6 +1,6 @@
-import { cn } from '@/sdk/lib/style';
+import { cn } from '@/lib/style';
 
-type TDotsProps = {
+type DotsProps = {
   itemsLength: number;
   selectedIndex: number;
   scrollTo: ((index: number) => void) | undefined;
@@ -10,7 +10,7 @@ type TDotsProps = {
   };
 };
 
-export const Dots = ({ itemsLength, selectedIndex, scrollTo, style }: TDotsProps) => {
+export const Dots = ({ itemsLength, selectedIndex, scrollTo, style }: DotsProps) => {
   const arr = new Array(itemsLength).fill(0);
   return (
     <div className={cn('flex gap-1 my-2 justify-center', style?.container)}>

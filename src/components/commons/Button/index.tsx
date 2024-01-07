@@ -1,4 +1,4 @@
-import { cn } from '@/sdk/lib/style';
+import { cn } from '@/lib/style';
 import { ComponentProps, ElementType, forwardRef } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
 
@@ -25,7 +25,7 @@ const button = tv({
 
 type ButtonVariants = VariantProps<typeof button>;
 
-type TButtonProps = ComponentProps<'button'> &
+type ButtonProps = ComponentProps<'button'> &
   ButtonVariants & {
     icon?: {
       render: ElementType;
@@ -33,7 +33,7 @@ type TButtonProps = ComponentProps<'button'> &
     };
   };
 
-export const Button = forwardRef<HTMLButtonElement, TButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, icon, ...props }, ref) => {
     const Icon = icon?.render;
     const position = icon?.position;

@@ -1,4 +1,4 @@
-import { cn } from '@/sdk/lib/style';
+import { cn } from '@/lib/style';
 import { ElementType } from 'react';
 
 type TextInputIconProps = {
