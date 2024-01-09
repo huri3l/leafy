@@ -16,6 +16,8 @@ Welcome to the early access stage of Leafy! While some features are still taking
 ✅ **CMS Integration (Prismic)**
 
 🔘 **Use page metadata sent by the CMS**
+
+🔘 **Setup static translation (for pt-br texts)**
   
 🔘 **Use shadcn/ui and elevate component organization**
 
