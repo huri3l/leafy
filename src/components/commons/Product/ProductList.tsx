@@ -12,13 +12,13 @@ type ProductListProps = {
 
 export const ProductList = ({ initialProductList }: ProductListProps) => {
   const [products, setProducts] = useState<TProductCard[]>(initialProductList);
-  const { tagFilters, filterProducts } = useFilter();
+  const { tagFilters, hasFilters, filterProducts } = useFilter();
   const { sortOption, sortProducts } = useSort();
 
   useEffect(() => {
     let updatedProducts;
 
-    if (tagFilters.length > 0) {
+    if (hasFilters) {
       updatedProducts = filterProducts(initialProductList);
     } else {
       updatedProducts = [...initialProductList];

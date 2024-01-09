@@ -1,5 +1,6 @@
 import { TProductCard } from '@/content/types';
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { useMemo } from 'react';
 
 export const useFilter = () => {
   const router = useRouter();
@@ -107,6 +108,10 @@ export const useFilter = () => {
     return productsFiltered;
   };
 
+  const hasFilters = useMemo(() => {
+    return !!(tagFilters.length > 0) || !!priceFilters.from || !!priceFilters.to;
+  }, [tagFilters, priceFilters]);
+
   return {
     tagFilters,
     priceFilters,
@@ -116,5 +121,6 @@ export const useFilter = () => {
     removePriceFilter,
     removeAllFilters,
     filterProducts,
+    hasFilters,
   };
 };

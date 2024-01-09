@@ -8,8 +8,6 @@ import { ShoppingBasket } from 'lucide-react';
 export default async function ProductPage({ params }: { params: { slug: string } }) {
   const product = await getProduct(params.slug);
 
-  console.log('product', product);
-
   return (
     <div>
       <ProductImages images={product.images} />
