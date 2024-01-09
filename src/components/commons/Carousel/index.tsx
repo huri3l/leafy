@@ -3,7 +3,6 @@ import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Dots } from './Dots';
 import { Arrows } from './Arrows';
-import { cn } from '@/lib/style';
 
 type CarouselProps = PropsWithChildren &
   EmblaOptionsType & {
