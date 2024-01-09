@@ -5,35 +5,7 @@ Leafy isn't just an average e-commerce. It is a vibrant **open-source** playgrou
 **Leafy is a fictional e-commerce platform. No real transactions or sales are allowed through Leafy. It's a simulated environment created for educational and exploratory purposes. Enjoy the experience, but don't expect to buy or sell real products here! 🌱**
 
 ## Project Overview
-Welcome to the early access stage of Leafy! While some features are still taking shape behind the scenes, the excitement is real! Here's a sneak peek at what's already sprouting and what's budding up next:
-
-✅ **Home**
-  
-✅ **Category Page**
-  
-✅ **Product Page**
-  
-✅ **CMS Integration (Prismic)**
-
-🔘 **Use page metadata sent by the CMS**
-
-🔘 **Setup static translation (for pt-br texts)**
-  
-🔘 **Use shadcn/ui and elevate component organization**
-
-🔘 **Use @prismicio/next and @prismicio/react components**
-  
-🔘 **Search**
-  
-🔘 **Firebase Integration**
-  
-🔘 **Account**
-  
-🔘 **Bag**
-  
-🔘 **Checkout**
-  
-🔘 **Desktop Version**
+Welcome to the early access stage of Leafy! While some features are still taking shape behind the scenes, the excitement is real! HYou can check what is already available and what is coming up through the [Projects tab](https://github.com/users/huri3l/projects/1/views/1).
 
 ## Configuring Your Leafy Experience
 Ready to explore the Leafy jungle? Follow these simple steps to clone the repository and start your local adventure:
