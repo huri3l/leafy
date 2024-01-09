@@ -18,6 +18,8 @@ Welcome to the early access stage of Leafy! While some features are still taking
 🔘 **Use page metadata sent by the CMS**
   
 🔘 **Use shadcn/ui and elevate component organization**
+
+🔘 **Use @prismicio/next and @prismicio/react components**
   
 🔘 **Search**
   
