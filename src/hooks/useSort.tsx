@@ -1,4 +1,4 @@
-import { TFormattedProductCard } from '@/sdk/home/types';
+import { TProductCard } from '@/content/types';
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
 export type SortOptions = 'ascending' | 'descending' | 'cheap' | 'expensive';
@@ -28,8 +28,8 @@ export const useSort = () => {
     updateURL();
   };
 
-  const sortProducts = (products: TFormattedProductCard[]) => {
-    const _sort = (a: TFormattedProductCard, b: TFormattedProductCard) => {
+  const sortProducts = (products: TProductCard[]) => {
+    const _sort = (a: TProductCard, b: TProductCard) => {
       if (sortOption === 'ascending') {
         return a.name.localeCompare(b.name);
       } else if (sortOption === 'descending') {

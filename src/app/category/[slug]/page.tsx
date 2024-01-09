@@ -1,7 +1,7 @@
-import { Filter } from '@/components/Product/Filter';
-import { ProductList } from '@/components/Product/ProductList';
-import { Sort } from '@/components/Product/Sort';
-import { getCategory } from '@/sdk/content/category';
+import { Filter } from '@/components/commons/Product/Filter';
+import { ProductList } from '@/components/commons/Product/ProductList';
+import { Sort } from '@/components/commons/Product/Sort';
+import { getCategory } from '@/content/category';
 import { PrismicRichText } from '@prismicio/react';
 
 export default async function CategoryPage({ params }: { params: { slug: string } }) {

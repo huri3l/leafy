@@ -1,5 +1,5 @@
-import { ProductImages } from '@/components/Product/ProductImages';
-import { ProductMain } from '@/components/Product/ProductMain';
+import { ProductImages } from '@/components/commons/Product/ProductImages';
+import { ProductMain } from '@/components/commons/Product/ProductMain';
 import { Button } from '@/components/commons/Button';
 import { getProduct } from '@/content/product';
 import { PrismicRichText } from '@prismicio/react';
