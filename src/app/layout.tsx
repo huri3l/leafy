@@ -2,12 +2,10 @@ import { Footer } from '@/components/commons/Footer';
 import { Header } from '@/components/commons/Header';
 import { DeviceHandler } from '@/components/commons/DeviceHandler';
 import { Metadata } from 'next';
+import defaultMeta from '@/static/metadata.json';
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'Leafy',
-  description: 'Sua e-loja de plantinhas!',
-};
+export const metadata: Metadata = defaultMeta;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

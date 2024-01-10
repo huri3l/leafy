@@ -2,9 +2,15 @@ import { Filter } from '@/components/commons/Product/Filter';
 import { ProductList } from '@/components/commons/Product/ProductList';
 import { Sort } from '@/components/commons/Product/Sort';
 import { getCategory } from '@/content/category';
+import { getMetadata } from '@/content/metadata';
 import { PrismicRichText } from '@prismicio/react';
+import { Metadata } from 'next';
 
-export default async function CategoryPage({ params }: { params: { slug: string } }) {
+type CategoryPageProps = {
+  params: { slug: string };
+};
+
+export default async function CategoryPage({ params }: CategoryPageProps) {
   const category = await getCategory(params.slug);
 
   return (
@@ -28,4 +34,8 @@ export default async function CategoryPage({ params }: { params: { slug: string 
       <ProductList initialProductList={category.products} />
     </div>
   );
+}
+
+export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+  return await getMetadata('category', params.slug);
 }
