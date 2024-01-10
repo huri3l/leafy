@@ -4,8 +4,14 @@ import { Button } from '@/components/commons/Button';
 import { getProduct } from '@/content/product';
 import { PrismicRichText } from '@prismicio/react';
 import { ShoppingBasket } from 'lucide-react';
+import { getMetadata } from '@/content/metadata';
+import { Metadata } from 'next';
 
-export default async function ProductPage({ params }: { params: { slug: string } }) {
+type ProductPageProps = {
+  params: { slug: string };
+};
+
+export default async function ProductPage({ params }: ProductPageProps) {
   const product = await getProduct(params.slug);
 
   return (
@@ -39,4 +45,8 @@ export default async function ProductPage({ params }: { params: { slug: string }
       </div>
     </div>
   );
+}
+
+export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
+  return await getMetadata('product', params.slug);
 }

@@ -1,5 +1,7 @@
 import { SectionContainer } from '@/components/sections/SectionContainer';
 import { getHome } from '@/content/home';
+import { getMetadata } from '@/content/metadata';
+import { Metadata } from 'next';
 
 export default async function Home() {
   const sections = await getHome();
@@ -11,4 +13,8 @@ export default async function Home() {
       ))}
     </main>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return await getMetadata('home');
 }
