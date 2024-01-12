@@ -1,4 +1,4 @@
-import { cn } from '@/lib/style';
+import { cn } from '@/lib/utils';
 import { ComponentProps, ElementType, forwardRef } from 'react';
 import { VariantProps, tv } from 'tailwind-variants';
 
@@ -41,6 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         className={cn(button(props), 'flex items-center justify-center gap-1', className)}
+        ref={ref}
         {...props}
       >
         {icon && Icon && position === 'left' && <Icon className="w-5 h-5" />}

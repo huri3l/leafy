@@ -1,4 +1,4 @@
-import { cn } from '@/lib/style';
+import { cn } from '@/lib/utils';
 import Link, { LinkProps } from 'next/link';
 import { ReactNode } from 'react';
 

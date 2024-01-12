@@ -1,4 +1,5 @@
 import { Button } from '@/components/commons/Button';
+import { dict } from '@/content/dictionary';
 import { TCategorySection } from '@/content/home/types';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -34,7 +35,7 @@ export const Categories = ({ data }: CategoriesProps) => {
           }}
           size="md"
         >
-          Veja mais
+          {dict('general.seeMore')}
         </Button>
       )}
     </div>

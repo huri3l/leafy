@@ -1,4 +1,4 @@
-import { cn } from '@/lib/style';
+import { cn } from '@/lib/utils';
 import { forwardRef, ComponentProps } from 'react';
 
 type RadioInputProps = ComponentProps<'input'> & {

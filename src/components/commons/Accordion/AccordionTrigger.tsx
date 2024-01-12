@@ -1,4 +1,4 @@
-import { cn } from '@/lib/style';
+import { cn } from '@/lib/utils';
 import * as Accordion from '@radix-ui/react-accordion';
 import { ChevronDown } from 'lucide-react';
 import { ComponentProps, forwardRef } from 'react';

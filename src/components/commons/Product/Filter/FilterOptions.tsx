@@ -1,6 +1,6 @@
 import { AccordionTrigger } from '@/components/commons/Accordion/AccordionTrigger';
 import { CheckboxInput } from '@/components/commons/Input/Checkbox';
-import { cn } from '@/lib/style';
+import { cn } from '@/lib/utils';
 import * as Accordion from '@radix-ui/react-accordion';
 import { useFilter } from '@/hooks/useFilter';
 import { NumberInput } from '@/components/commons/Input/Number';

@@ -1,4 +1,5 @@
 import { Button } from '@/components/commons/Button';
+import { dict } from '@/content/dictionary';
 import { DialogTrigger } from '@radix-ui/react-dialog';
 import { Filter } from 'lucide-react';
 
@@ -13,7 +14,7 @@ export const FilterOpenButton = () => {
         color="transparent"
         className="font-normal gap-3"
       >
-        Filtrar
+        {dict('general.filter')}
       </Button>
     </DialogTrigger>
   );

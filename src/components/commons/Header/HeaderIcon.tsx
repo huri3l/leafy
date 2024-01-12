@@ -1,7 +1,7 @@
 import { ComponentProps } from 'react';
 import { Leafy, LeafySm } from '@/assets/icons';
 import Link from 'next/link';
-import { cn } from '@/lib/style';
+import { cn } from '@/lib/utils';
 
 type HeaderIconProps = ComponentProps<'svg'> & {
   isSearching: boolean;

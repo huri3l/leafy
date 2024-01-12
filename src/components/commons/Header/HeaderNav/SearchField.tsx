@@ -2,6 +2,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { TextInput } from '../../Input/Text';
 import { useRouter } from 'next/navigation';
 import { X } from 'lucide-react';
+import { dict } from '@/content/dictionary';
+import { routes } from '@/lib/routes';
 
 type SearchFieldProps = {
   onLeave: () => void;
@@ -16,7 +18,7 @@ export const SearchField = ({ onLeave }: SearchFieldProps) => {
   const router = useRouter();
 
   const onSubmit: SubmitHandler<TForm> = ({ term }) => {
-    router.push(`/produtos?busca=${term}`);
+    router.push(routes.search(term));
   };
 
   return (
@@ -24,7 +26,7 @@ export const SearchField = ({ onLeave }: SearchFieldProps) => {
       <TextInput.Root
         className="text-xs"
         type="text"
-        placeholder="O que você está procurando?"
+        placeholder={dict('header.search')}
         autoFocus
         {...register('term', { onBlur: onLeave })}
       >

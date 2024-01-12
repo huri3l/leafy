@@ -1,7 +1,7 @@
 import * as Accordion from '@radix-ui/react-accordion';
 import { Icon, IconName } from '../Icon';
 import Link from 'next/link';
-import { cn } from '@/lib/style';
+import { cn } from '@/lib/utils';
 import { AccordionTrigger } from '../Accordion/AccordionTrigger';
 import { HTMLAttributeAnchorTarget } from 'react';
 import { DialogClose } from '@radix-ui/react-dialog';
