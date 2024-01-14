@@ -6,6 +6,7 @@ import { Search } from 'lucide-react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { routes } from '@/lib/routes';
 
 type TForm = {
   term: string;
@@ -21,7 +22,7 @@ export const KnowUs = ({ data }: KnowUsProps) => {
   const router = useRouter();
 
   const onSubmit: SubmitHandler<TForm> = ({ term }) => {
-    router.push(`/produtos?busca=${term}`);
+    router.push(routes.search(term));
   };
 
   return (

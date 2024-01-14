@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { X } from 'lucide-react';
-import { cn } from '@/lib/style';
+import { cn } from '@/lib/utils';
 
 type ChipProps = {
   children: ReactNode;

@@ -2,8 +2,8 @@ import { Menu as MenuIcon } from 'lucide-react';
 import * as Dialog from '@radix-ui/react-dialog';
 import { MenuOptionsContainer } from './MenuOptionsContainer';
 
-import data from '@/static/menu.json';
 import { TMenuOption } from './MenuOption';
+import { dict } from '@/content/dictionary';
 
 export const Menu = () => {
   return (
@@ -19,7 +19,7 @@ export const Menu = () => {
             <Dialog.Close>
               <MenuIcon className="w-7 h-7 stroke-lf-gray-600 shrink-0" />
             </Dialog.Close>
-            <MenuOptionsContainer items={data as TMenuOption[]} />
+            <MenuOptionsContainer items={dict('menu.items') as TMenuOption[]} />
           </div>
         </div>
       </Dialog.Content>

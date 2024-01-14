@@ -1,6 +1,7 @@
 import { RadioInput } from '@/components/commons/Input/Radio';
 import { UseFormRegister } from 'react-hook-form';
 import { SortFormInputs } from '.';
+import { dict } from '@/content/dictionary';
 
 type SortOptionsProps = {
   register: UseFormRegister<SortFormInputs>;
@@ -12,17 +13,22 @@ export const SortOptions = ({ register }: SortOptionsProps) => {
       <RadioInput
         id="ascending"
         value="ascending"
-        label="Ordem Crescente (A-Z)"
+        label={dict('sort.ascending')}
         {...register('sort')}
       />
       <RadioInput
         id="descending"
         value="descending"
-        label="Ordem Decrescente (Z-A)"
+        label={dict('sort.descending')}
         {...register('sort')}
       />
-      <RadioInput id="cheap" value="cheap" label="Menor Preço" {...register('sort')} />
-      <RadioInput id="expensive" value="expensive" label="Maior Preço" {...register('sort')} />
+      <RadioInput id="cheap" value="cheap" label={dict('sort.cheap')} {...register('sort')} />
+      <RadioInput
+        id="expensive"
+        value="expensive"
+        label={dict('sort.expensive')}
+        {...register('sort')}
+      />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Button } from '../Button';
 import Link from 'next/link';
 import { TImage, TPrice } from '@/content/types';
+import { dict } from '@/content/dictionary';
 
 type ProductCardProps = {
   link: string;
@@ -50,7 +51,7 @@ export const ProductCard = ({
             }}
             className="mt-2 w-fit mx-auto"
           >
-            Adicionar
+            {dict('general.add')}
           </Button>
         </div>
       </div>

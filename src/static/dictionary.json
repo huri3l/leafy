@@ -1,0 +1,126 @@
+{
+  "general": {
+    "back": "Voltar",
+    "buy": "Comprar",
+    "clean": "Limpar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "add": "Adicionar",
+    "seeMore": "Veja mais"
+  },
+  "sort": {
+    "ascending": "Ordem Crescente (A-Z)",
+    "descending": "Ordem Decrescente (Z-A)",
+    "cheap": "Menor Preço",
+    "expensive": "Maior Preço"
+  },
+  "products": {
+    "cart": "Add to Cart"
+  },
+  "desktop-warning": [
+    {
+      "type": "paragraph",
+      "text": "O Leafy ainda está em desenvolvimento",
+      "spans": [{ "start": 0, "end": 37, "type": "heading6" }],
+      "direction": "ltr"
+    },
+    {
+      "type": "paragraph",
+      "text": "No momento, nosso site está disponível apenas em dispositivos móveis.",
+      "spans": [{ "start": 28, "end": 61, "type": "strong" }],
+      "direction": "ltr"
+    },
+    {
+      "type": "paragraph",
+      "text": "Pedimos que acesse-o em um celular ou ajuste as dimensões do seu navegador para o mesmo tamanho de um dispositivo móvel.",
+      "spans": [],
+      "direction": "ltr"
+    },
+    {
+      "type": "paragraph",
+      "text": "Agradecemos sua compreensão.",
+      "spans": [],
+      "direction": "ltr"
+    }
+  ],
+  "not-found": [
+    {
+      "type": "paragraph",
+      "text": "Essa página ainda está em desenvolvimento.",
+      "spans": [{ "start": 0, "end": 42, "type": "strong" }],
+      "direction": "ltr"
+    },
+    {
+      "type": "paragraph",
+      "text": "Agradecemos sua compreensão.",
+      "spans": [{ "start": 0, "end": 28, "type": "strong" }],
+      "direction": "ltr"
+    }
+  ],
+  "header": {
+    "search": "O que você está procurando?"
+  },
+  "footer": {
+    "title": "Leafy",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Todas as plantas para",
+        "spans": [{ "start": 22, "end": 26, "type": "strong" }],
+        "direction": "ltr"
+      },
+      {
+        "type": "paragraph",
+        "text": "você",
+        "spans": [{ "start": 0, "end": 4, "type": "strong" }],
+        "direction": "ltr"
+      }
+    ]
+  },
+  "menu": {
+    "items": [
+      {
+        "name": "Categorias",
+        "icon": "Flower",
+        "subItems": [
+          {
+            "label": "Cactos",
+            "link": {
+              "url": "/categoria/cactos"
+            }
+          },
+          {
+            "label": "Decorativas",
+            "link": {
+              "url": "/categoria/plantas-decorativas"
+            }
+          },
+          {
+            "label": "Naturais",
+            "link": {
+              "url": "/categoria/plantas-naturais"
+            }
+          }
+        ]
+      },
+      {
+        "name": "GitHub",
+        "icon": "Github",
+        "link": { "url": "https://github.com/huri3l/leafy", "target": "_blank" }
+      }
+    ],
+    "account": {
+      "loggedOut": {
+        "title": "Crie ou entre com sua conta para receber diversos benefícios!",
+        "hint": [
+          {
+            "type": "paragraph",
+            "text": "Ainda não possui conta? Cadastre-se",
+            "spans": [{ "start": 24, "end": 35, "type": "strong" }],
+            "direction": "ltr"
+          }
+        ]
+      }
+    }
+  }
+}

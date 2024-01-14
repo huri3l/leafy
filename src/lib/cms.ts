@@ -2,7 +2,7 @@ import { ImageField, asLink } from '@prismicio/client';
 import { ProductCarouselSliceListItem, ProductPriceSlice } from '../../prismicio-types';
 import { TProductPagePrice } from '../content/product/types';
 import { TFilterOption, TLinkField } from '@/content/types';
-import { formatPrice } from './format';
+import { formatPrice } from './utils';
 
 export const cleanCmsImage = (field: ImageField) => {
   return {

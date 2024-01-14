@@ -1,7 +1,7 @@
 import { createClient } from '@/prismicio';
 import { THomeSection } from './types';
 import { cleanCmsImage, cleanCmsLink } from '@/lib/cms';
-import { formatPrice } from '@/lib/format';
+import { formatPrice } from '@/lib/utils';
 
 export const getHome = async () => {
   const client = createClient();

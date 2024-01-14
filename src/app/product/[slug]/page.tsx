@@ -6,6 +6,7 @@ import { PrismicRichText } from '@prismicio/react';
 import { ShoppingBasket } from 'lucide-react';
 import { getMetadata } from '@/content/metadata';
 import { Metadata } from 'next';
+import { dict } from '@/content/dictionary';
 
 type ProductPageProps = {
   params: { slug: string };
@@ -25,7 +26,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <PrismicRichText
           field={product.description}
           components={{
-            heading6: ({ children }) => <h6 className="font-medium text-xl mb-2">{children}</h6>,
+            heading6: ({ children }) => (
+              <strong className="font-medium text-xl mb-2">{children}</strong>
+            ),
             paragraph: ({ children }) => <p className="mt-3">{children}</p>,
             listItem: ({ children }) => <li className="ml-1 list-disc list-inside">{children}</li>,
           }}
@@ -39,7 +42,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             }}
             color="success"
           >
-            <strong className="font-bold">Comprar</strong>
+            <strong className="font-bold">{dict('general.buy')}</strong>
           </Button>
         </div>
       </div>

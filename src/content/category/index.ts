@@ -1,7 +1,7 @@
 import { createClient } from '@/prismicio';
 import { TCategoryPage } from './types';
 import { cleanCmsImage, cleanCmsLink, getFilters } from '@/lib/cms';
-import { formatPrice } from '@/lib/format';
+import { formatPrice } from '@/lib/utils';
 
 export const getCategory = async (slug: string) => {
   const client = createClient();
