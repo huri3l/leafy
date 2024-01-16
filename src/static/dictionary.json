@@ -6,7 +6,8 @@
     "filter": "Filtrar",
     "sort": "Ordenar",
     "add": "Adicionar",
-    "seeMore": "Veja mais"
+    "seeMore": "Veja mais",
+    "goHome": "Ir para Página Inicial"
   },
   "sort": {
     "ascending": "Ordem Crescente (A-Z)",

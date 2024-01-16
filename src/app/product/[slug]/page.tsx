@@ -1,12 +1,12 @@
 import { ProductImages } from '@/components/commons/Product/ProductImages';
 import { ProductMain } from '@/components/commons/Product/ProductMain';
-import { Button } from '@/components/commons/Button';
 import { getProduct } from '@/content/product';
 import { PrismicRichText } from '@prismicio/react';
 import { ShoppingBasket } from 'lucide-react';
 import { getMetadata } from '@/content/metadata';
 import { Metadata } from 'next';
 import { dict } from '@/content/dictionary';
+import { Button } from '@/components/ui/button';
 
 type ProductPageProps = {
   params: { slug: string };
@@ -35,14 +35,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
         />
 
         <div className="fixed bottom-4 right-4 shadow-lg">
-          <Button
-            icon={{
-              render: ShoppingBasket,
-              position: 'right',
-            }}
-            color="success"
-          >
-            <strong className="font-bold">{dict('general.buy')}</strong>
+          <Button variant="success" className="shadow-md">
+            <ShoppingBasket className="w-5 h-5 stroke-2" />
+            <strong>{dict('general.buy')}</strong>
           </Button>
         </div>
       </div>

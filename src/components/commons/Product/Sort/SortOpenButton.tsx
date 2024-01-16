@@ -1,4 +1,4 @@
-import { Button } from '@/components/commons/Button';
+import { Button } from '@/components/ui/button';
 import { dict } from '@/content/dictionary';
 import { DialogTrigger } from '@radix-ui/react-dialog';
 import { ArrowDownAZ } from 'lucide-react';
@@ -6,14 +6,8 @@ import { ArrowDownAZ } from 'lucide-react';
 export const SortOpenButton = () => {
   return (
     <DialogTrigger className="group" asChild>
-      <Button
-        icon={{
-          position: 'left',
-          render: ArrowDownAZ,
-        }}
-        color="transparent"
-        className="font-normal gap-3"
-      >
+      <Button variant="ghost" className="font-normal gap-3">
+        <ArrowDownAZ className="w-5 h-5" />
         {dict('general.sort')}
       </Button>
     </DialogTrigger>

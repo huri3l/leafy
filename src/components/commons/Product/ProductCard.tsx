@@ -1,9 +1,9 @@
 import { ShoppingBag } from 'lucide-react';
 import Image from 'next/image';
-import { Button } from '../Button';
 import Link from 'next/link';
 import { TImage, TPrice } from '@/content/types';
 import { dict } from '@/content/dictionary';
+import { Button } from '@/components/ui/button';
 
 type ProductCardProps = {
   link: string;
@@ -42,15 +42,8 @@ export const ProductCard = ({
         <div className="flex flex-col p-2.5">
           <span>{name}</span>
           <span className="text-lf-green-alt">{price.formatted}</span>
-          <Button
-            size="sm"
-            color="success"
-            icon={{
-              render: ShoppingBag,
-              position: 'left',
-            }}
-            className="mt-2 w-fit mx-auto"
-          >
+          <Button size="sm" variant="success" className="mt-2 w-fit mx-auto">
+            <ShoppingBag className="w-5 h-5" />
             {dict('general.add')}
           </Button>
         </div>

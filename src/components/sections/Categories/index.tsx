@@ -1,4 +1,4 @@
-import { Button } from '@/components/commons/Button';
+import { Button } from '@/components/ui/button';
 import { dict } from '@/content/dictionary';
 import { TCategorySection } from '@/content/home/types';
 import { ArrowRight } from 'lucide-react';
@@ -27,14 +27,8 @@ export const Categories = ({ data }: CategoriesProps) => {
         </Link>
       ))}
       {seeMore && (
-        <Button
-          className="mx-auto"
-          icon={{
-            render: ArrowRight,
-            position: 'right',
-          }}
-          size="md"
-        >
+        <Button className="mx-auto" size="md">
+          <ArrowRight className="w-5 h-5" />
           {dict('general.seeMore')}
         </Button>
       )}
