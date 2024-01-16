@@ -6,7 +6,15 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  prefix: '',
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
       colors: {
         'lf-green-400': '#72CBAE',
@@ -34,8 +42,22 @@ const config: Config = {
         'expand-bottom-full': 'expand-bottom-100 3s linear forwards',
         'expand-bottom-3/4': 'expand-bottom-3/4 0.2s linear forwards',
         'expand-bottom-35-percent': 'expand-bottom-35 0.2s linear forwards',
+
+        'old-accordion-down': 'old-accordion-down 0.2s ease-out',
+        'old-accordion-up': 'old-accordion-up 0.2s ease-out',
+
+        'accordion-down': 'old-accordion-down 0.2s ease-out',
+        'accordion-up': 'old-accordion-up 0.2s ease-out',
       },
       keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
         'fade-in': {
           '0%': { opacity: '0' },
           '50%': { opacity: '1' },
@@ -106,9 +128,18 @@ const config: Config = {
             opacity: '1',
           },
         },
+        'old-accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'old-accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
       },
     },
   },
-  plugins: [],
-};
+  plugins: [require('tailwindcss-animate')],
+} satisfies Config;
+
 export default config;

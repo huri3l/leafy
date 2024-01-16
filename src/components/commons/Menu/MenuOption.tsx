@@ -1,10 +1,8 @@
-import * as Accordion from '@radix-ui/react-accordion';
 import { Icon, IconName } from '../Icon';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { AccordionTrigger } from '../Accordion/AccordionTrigger';
 import { HTMLAttributeAnchorTarget } from 'react';
 import { DialogClose } from '@radix-ui/react-dialog';
+import { AccordionContent, AccordionTrigger } from '@/components/ui/accordion';
 
 type LinkType = {
   url: string;
@@ -53,24 +51,23 @@ const CollapsibleMenuOption = ({ icon, name, subItems }: TMenuOption) => {
           <span className="text-lf-gray-600 text-lg">{name}</span>
         </div>
       </AccordionTrigger>
-      <Accordion.Content
-        className={cn('AccordionContent', 'flex gap-2.5 animate-expand-bottom-full')}
-      >
-        <div className="self-stretch w-6 pt-2">
-          <div className="bg-lf-gray-300 w-0.5 h-full mx-auto" />
-        </div>
-        <div className={cn('AccordionContentText', 'flex flex-col pt-2 gap-0.5')}>
+      <AccordionContent className="flex gap-2.5">
+        <div className="flex flex-col pt-2 gap-0.5">
           {subItems?.map(({ label, link }, idx) => {
             return (
               <DialogClose key={label + idx} asChild>
-                <Link href={link?.url ?? ''} className="text-lf-gray-600" target={link?.target}>
+                <Link
+                  href={link?.url ?? ''}
+                  className="text-lf-gray-600 text-base"
+                  target={link?.target}
+                >
                   {label}
                 </Link>
               </DialogClose>
             );
           })}
         </div>
-      </Accordion.Content>
+      </AccordionContent>
     </div>
   );
 };

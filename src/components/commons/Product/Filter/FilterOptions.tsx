@@ -1,12 +1,15 @@
-import { AccordionTrigger } from '@/components/commons/Accordion/AccordionTrigger';
 import { CheckboxInput } from '@/components/commons/Input/Checkbox';
-import { cn } from '@/lib/utils';
-import * as Accordion from '@radix-ui/react-accordion';
 import { useFilter } from '@/hooks/useFilter';
 import { NumberInput } from '@/components/commons/Input/Number';
 import { UseFormRegister } from 'react-hook-form';
 import { FilterFormInputs } from '.';
 import { TFilterOption } from '@/content/types';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 type FilterOptionsProps = {
   options: TFilterOption[];
@@ -33,12 +36,9 @@ export const FilterOptions = ({
   };
 
   return (
-    <Accordion.Root
-      className="AccordionRoot my-2 overflow-y-scroll overflow-x-hidden pb-14"
-      type="multiple"
-    >
+    <Accordion className="my-2 overflow-y-scroll overflow-x-hidden pb-14" type="multiple">
       {options.map(({ title, possibilities }, idx) => (
-        <Accordion.Item
+        <AccordionItem
           key={title + idx}
           value={`item-${idx}`}
           className="border-b-[1px] border-b-lf-gray-200 py-3"
@@ -48,13 +48,8 @@ export const FilterOptions = ({
               <span className="text-lf-gray-600 font-medium">{title}</span>
             </div>
           </AccordionTrigger>
-          <Accordion.Content
-            className={cn('AccordionContent', 'flex gap-2.5 animate-expand-bottom-full')}
-          >
-            <div className="self-stretch w-6 pt-2">
-              <div className="bg-lf-gray-300 w-0.5 h-full mx-auto" />
-            </div>
-            <div className={cn('AccordionContentText', 'w-full flex flex-col pt-2 gap-0.5')}>
+          <AccordionContent className="flex gap-2.5">
+            <div className="w-full flex flex-col pt-2 gap-0.5">
               {possibilities.map((possibility, idx) => (
                 <CheckboxInput
                   key={possibility + idx}
@@ -66,12 +61,12 @@ export const FilterOptions = ({
                 />
               ))}
             </div>
-          </Accordion.Content>
-        </Accordion.Item>
+          </AccordionContent>
+        </AccordionItem>
       ))}
 
       {hasPriceFilter && (
-        <Accordion.Item
+        <AccordionItem
           value={`item-${options.length + 1}`}
           className="border-b-[1px] border-b-lf-gray-200 py-3"
         >
@@ -80,19 +75,14 @@ export const FilterOptions = ({
               <span className="text-lf-gray-600 font-medium">Preço</span>
             </div>
           </AccordionTrigger>
-          <Accordion.Content
-            className={cn('AccordionContent', 'flex gap-2.5 animate-expand-bottom-full')}
-          >
-            <div className="self-stretch w-6 pt-2">
-              <div className="bg-lf-gray-300 w-0.5 h-full mx-auto" />
-            </div>
-            <div className={cn('AccordionContentText', 'w-full flex pt-2 gap-6')}>
+          <AccordionContent className="flex gap-2.5">
+            <div className="w-full flex pt-2 gap-6">
               <NumberInput label="De" id="from" placeholder="R$" step="any" {...register('from')} />
               <NumberInput label="Para" id="to" placeholder="R$" step="any" {...register('to')} />
             </div>
-          </Accordion.Content>
-        </Accordion.Item>
+          </AccordionContent>
+        </AccordionItem>
       )}
-    </Accordion.Root>
+    </Accordion>
   );
 };
