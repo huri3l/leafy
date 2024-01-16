@@ -1,3 +1,4 @@
+import { Badge } from '@/components/ui/badge';
 import { TProductPagePrice } from '@/content/product/types';
 import { PrismicRichText } from '@prismicio/react';
 
@@ -14,9 +15,7 @@ export const ProductMain = ({ name, price }: ProductMainProps) => {
         {price.old && <p className="line-through text-sm">{price.old.formatted}</p>}
         <span className="inline-flex gap-2 items-center mb-0.5">
           <p className="text-lf-green-alt text-xl font-bold">{price.current.formatted}</p>
-          {price.discount && (
-            <p className="text-sm px-1.5 py-0.5 bg-lf-green-200 rounded-md">{price.discount}</p>
-          )}
+          {price.discount && <Badge>{price.discount}</Badge>}
         </span>
         {price.details && <PrismicRichText field={price.details} />}
       </div>

@@ -1,4 +1,4 @@
-import { Chip } from '@/components/commons/Chip';
+import { Badge } from '@/components/ui/badge';
 import { dict } from '@/content/dictionary';
 import { useFilter } from '@/hooks/useFilter';
 import { DialogClose } from '@radix-ui/react-dialog';
@@ -23,9 +23,16 @@ export const FilterHeader = () => {
       {tagFilters.length > 0 && (
         <div className="flex gap-2 flex-wrap pb-4 border-b-2 border-b-lf-gray-200">
           {tagFilters?.map((filter) => (
-            <Chip key={filter} onDelete={() => handleDelete(filter)}>
+            <Badge key={filter} variant="secondary" className="gap-2">
               {filter}
-            </Chip>
+              <button
+                type="button"
+                className="w-auto rounded-full bg-lf-gray-200"
+                onClick={() => handleDelete(filter)}
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            </Badge>
           ))}
         </div>
       )}
