@@ -9,7 +9,7 @@ type SortOptionsProps = {
 
 export const SortOptions = ({ register }: SortOptionsProps) => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 px-4 mb-6">
       <RadioInput
         id="ascending"
         value="ascending"

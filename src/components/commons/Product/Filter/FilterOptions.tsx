@@ -33,7 +33,7 @@ export const FilterOptions = ({
   };
 
   return (
-    <Accordion className="my-2 overflow-y-scroll overflow-x-hidden pb-14" type="multiple">
+    <Accordion className="my-2 overflow-y-scroll overflow-x-hidden pb-6 px-6" type="multiple">
       {options.map(({ title, possibilities }, idx) => (
         <AccordionItem
           key={title + idx}
