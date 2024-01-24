@@ -1,4 +1,3 @@
-import { CheckboxInput } from '@/components/commons/Input/Checkbox';
 import { useFilter } from '@/hooks/useFilter';
 import { NumberInput } from '@/components/commons/Input/Number';
 import { UseFormRegister } from 'react-hook-form';
@@ -10,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { Checkbox } from '@/components/ui/checkbox';
 
 type FilterOptionsProps = {
   options: TFilterOption[];
@@ -24,14 +24,11 @@ export const FilterOptions = ({
 }: FilterOptionsProps) => {
   const { removeTagFilter, insertTagFilter, tagFilters } = useFilter();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e?.target.value.trim();
-    const checked = e?.target.checked;
-
+  const handleChange = (checked: boolean, filter: string) => {
     if (!checked) {
-      removeTagFilter(value);
+      removeTagFilter(filter);
     } else {
-      insertTagFilter(value);
+      insertTagFilter(filter);
     }
   };
 
@@ -50,15 +47,15 @@ export const FilterOptions = ({
           </AccordionTrigger>
           <AccordionContent className="flex gap-2.5">
             <div className="w-full flex flex-col pt-2 gap-0.5">
-              {possibilities.map((possibility, idx) => (
-                <CheckboxInput
-                  key={possibility + idx}
-                  id={possibility}
-                  label={possibility}
-                  value={possibility}
-                  onChange={handleChange}
-                  checked={tagFilters.includes(possibility)}
-                />
+              {possibilities.map((filter, idx) => (
+                <div key={filter + idx} className="flex items-center space-x-2">
+                  <Checkbox
+                    id={filter}
+                    onCheckedChange={(state) => handleChange(Boolean(state), filter)}
+                    checked={tagFilters.includes(filter)}
+                  />
+                  <label htmlFor={filter}>{filter}</label>
+                </div>
               ))}
             </div>
           </AccordionContent>
