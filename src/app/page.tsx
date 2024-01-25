@@ -1,4 +1,4 @@
-import { SectionContainer } from '@/components/sections/SectionContainer';
+import { SectionContainer } from '@/components/home/SectionContainer';
 import { getHome } from '@/content/home';
 import { getMetadata } from '@/content/metadata';
 import { Metadata } from 'next';

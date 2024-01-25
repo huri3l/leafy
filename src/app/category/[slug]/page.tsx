@@ -1,6 +1,6 @@
-import { Filter } from '@/components/commons/Product/Filter';
-import { ProductList } from '@/components/commons/Product/ProductList';
-import { Sort } from '@/components/commons/Product/Sort';
+import { Filter } from '@/components/commons/filter';
+import { ProductList } from '@/components/commons/product-list';
+import { Sort } from '@/components/commons/sort';
 import { getCategory } from '@/content/category';
 import { getMetadata } from '@/content/metadata';
 import { PrismicRichText } from '@prismicio/react';

@@ -1,5 +1,3 @@
-import { ProductImages } from '@/components/commons/Product/ProductImages';
-import { ProductMain } from '@/components/commons/Product/ProductMain';
 import { getProduct } from '@/content/product';
 import { PrismicRichText } from '@prismicio/react';
 import { ShoppingBasket } from 'lucide-react';
@@ -7,6 +5,8 @@ import { getMetadata } from '@/content/metadata';
 import { Metadata } from 'next';
 import { dict } from '@/content/dictionary';
 import { Button } from '@/components/ui/button';
+import { ProductImages } from '@/components/product-page/images';
+import { ProductMain } from '@/components/product-page/main';
 
 type ProductPageProps = {
   params: { slug: string };

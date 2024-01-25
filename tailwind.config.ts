@@ -37,16 +37,10 @@ const config: Config = {
       },
       animation: {
         'fade-in': 'fade-in 1s linear forwards',
-        'expand-menu': 'expand-83 0.2s linear forwards',
         'expand-full': 'expand-100 0.3s linear forwards',
-        'expand-bottom-3/4': 'expand-bottom-3/4 0.2s linear forwards',
-        'expand-bottom-35-percent': 'expand-bottom-35 0.2s linear forwards',
 
-        'old-accordion-down': 'old-accordion-down 0.2s ease-out',
-        'old-accordion-up': 'old-accordion-up 0.2s ease-out',
-
-        'accordion-down': 'old-accordion-down 0.2s ease-out',
-        'accordion-up': 'old-accordion-up 0.2s ease-out',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
       keyframes: {
         'accordion-down': {
@@ -74,53 +68,6 @@ const config: Config = {
             width: '100%',
             opacity: '1',
           },
-        },
-        'expand-bottom-35': {
-          '0%': {
-            float: 'top',
-            height: '0',
-            opacity: '0',
-          },
-          '5%': { opacity: '1' },
-          '100%': {
-            float: 'top',
-            height: '35%',
-            opacity: '1',
-          },
-        },
-        'expand-bottom-3/4': {
-          '0%': {
-            float: 'top',
-            height: '0',
-            opacity: '0',
-          },
-          '5%': { opacity: '1' },
-          '100%': {
-            float: 'top',
-            height: '75%',
-            opacity: '1',
-          },
-        },
-        'expand-83': {
-          '0%': {
-            float: 'right',
-            width: '0',
-            opacity: '0',
-          },
-          '5%': { opacity: '1' },
-          '100%': {
-            float: 'right',
-            width: '83.333333%',
-            opacity: '1',
-          },
-        },
-        'old-accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'old-accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
         },
       },
     },
