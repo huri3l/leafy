@@ -8,7 +8,8 @@
     "sort": "Ordenar",
     "add": "Adicionar",
     "seeMore": "Veja mais",
-    "goHome": "Ir para Página Inicial"
+    "goHome": "Ir para Página Inicial",
+    "close": "Fechar"
   },
   "sort": {
     "ascending": "Ordem Crescente (A-Z)",
