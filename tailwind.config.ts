@@ -6,7 +6,15 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  prefix: '',
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
       colors: {
         'lf-green-400': '#72CBAE',
@@ -29,13 +37,20 @@ const config: Config = {
       },
       animation: {
         'fade-in': 'fade-in 1s linear forwards',
-        'expand-menu': 'expand-83 0.2s linear forwards',
         'expand-full': 'expand-100 0.3s linear forwards',
-        'expand-bottom-full': 'expand-bottom-100 3s linear forwards',
-        'expand-bottom-3/4': 'expand-bottom-3/4 0.2s linear forwards',
-        'expand-bottom-35-percent': 'expand-bottom-35 0.2s linear forwards',
+
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
       keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
         'fade-in': {
           '0%': { opacity: '0' },
           '50%': { opacity: '1' },
@@ -54,61 +69,10 @@ const config: Config = {
             opacity: '1',
           },
         },
-        'expand-bottom-100': {
-          '0%': {
-            float: 'top',
-            height: '0',
-            opacity: '0',
-          },
-          '5%': { opacity: '1' },
-          '100%': {
-            float: 'top',
-            height: '100%',
-            opacity: '1',
-          },
-        },
-        'expand-bottom-35': {
-          '0%': {
-            float: 'top',
-            height: '0',
-            opacity: '0',
-          },
-          '5%': { opacity: '1' },
-          '100%': {
-            float: 'top',
-            height: '35%',
-            opacity: '1',
-          },
-        },
-        'expand-bottom-3/4': {
-          '0%': {
-            float: 'top',
-            height: '0',
-            opacity: '0',
-          },
-          '5%': { opacity: '1' },
-          '100%': {
-            float: 'top',
-            height: '75%',
-            opacity: '1',
-          },
-        },
-        'expand-83': {
-          '0%': {
-            float: 'right',
-            width: '0',
-            opacity: '0',
-          },
-          '5%': { opacity: '1' },
-          '100%': {
-            float: 'right',
-            width: '83.333333%',
-            opacity: '1',
-          },
-        },
       },
     },
   },
-  plugins: [],
-};
+  plugins: [require('tailwindcss-animate')],
+} satisfies Config;
+
 export default config;

@@ -1,6 +1,6 @@
-import { Footer } from '@/components/commons/Footer';
-import { Header } from '@/components/commons/Header';
-import { DeviceHandler } from '@/components/commons/DeviceHandler';
+import { Footer } from '@/components/commons/footer';
+import { Header } from '@/components/commons/header';
+import { DeviceHandler } from '@/components/commons/device-handler';
 import { Metadata } from 'next';
 import defaultMeta from '@/static/metadata.json';
 import './globals.css';

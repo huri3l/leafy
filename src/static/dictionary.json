@@ -1,12 +1,15 @@
 {
   "general": {
     "back": "Voltar",
+    "next": "Próximo",
     "buy": "Comprar",
     "clean": "Limpar",
     "filter": "Filtrar",
     "sort": "Ordenar",
     "add": "Adicionar",
-    "seeMore": "Veja mais"
+    "seeMore": "Veja mais",
+    "goHome": "Ir para Página Inicial",
+    "close": "Fechar"
   },
   "sort": {
     "ascending": "Ordem Crescente (A-Z)",

@@ -1,6 +1,6 @@
-import { Filter } from '@/components/commons/Product/Filter';
-import { ProductList } from '@/components/commons/Product/ProductList';
-import { Sort } from '@/components/commons/Product/Sort';
+import { Filter } from '@/components/commons/filter';
+import { ProductList } from '@/components/commons/product-list';
+import { Sort } from '@/components/commons/sort';
 import { getCategory } from '@/content/category';
 import { getMetadata } from '@/content/metadata';
 import { PrismicRichText } from '@prismicio/react';
@@ -26,7 +26,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       </div>
       <div className="space-y-4">
         <strong className="text-xl">{category.name}</strong>
-        <div className="flex w-fit px-6 mx-auto gap-8 border-b-2 border-b-lf-gray-200">
+        <div className="flex w-fit px-6 pb-1 mx-auto gap-8 border-b-2 border-b-lf-gray-200">
           <Filter options={category.filters} hasPriceFilter={true} />
           <Sort />
         </div>
