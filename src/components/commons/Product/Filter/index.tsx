@@ -10,6 +10,7 @@ import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { Button } from '@/components/ui/button';
 import { Filter as FilterIcon } from 'lucide-react';
 import { dict } from '@/content/dictionary';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 type FilterProps = {
   options: TFilterOption[];
@@ -53,9 +54,11 @@ export const Filter = ({ options, hasPriceFilter = false }: FilterProps) => {
         </Button>
       </DrawerTrigger>
       <DrawerContent>
-        <form className="flex flex-col h-full" onSubmit={handleSubmit(onSubmit)}>
+        <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
           <FilterHeader />
-          <FilterOptions options={options} hasPriceFilter={hasPriceFilter} register={register} />
+          <ScrollArea className="h-[60vh] w-full">
+            <FilterOptions options={options} hasPriceFilter={hasPriceFilter} register={register} />
+          </ScrollArea>
           <FilterFooter />
         </form>
       </DrawerContent>
