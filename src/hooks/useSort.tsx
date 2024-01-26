@@ -3,11 +3,13 @@ import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
 export type SortOptions = 'ascending' | 'descending' | 'cheap' | 'expensive';
 
+export const __sort = 'sort';
+
 export const useSort = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = new URLSearchParams(Array.from(useSearchParams().entries()));
-  const sortOption = (searchParams.get('sort') as SortOptions) ?? undefined;
+  const sortOption = (searchParams.get(__sort) as SortOptions) ?? undefined;
 
   const updateURL = () => {
     const search = searchParams.toString();
@@ -17,13 +19,13 @@ export const useSort = () => {
   };
 
   const insertSortOption = (option: SortOptions) => {
-    searchParams.set('sort', option);
+    searchParams.set(__sort, option);
 
     updateURL();
   };
 
   const removeSortOption = () => {
-    searchParams.delete('sort');
+    searchParams.delete(__sort);
 
     updateURL();
   };

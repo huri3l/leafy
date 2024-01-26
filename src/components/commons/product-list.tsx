@@ -12,7 +12,7 @@ type ProductListProps = {
 
 export const ProductList = ({ initialProductList }: ProductListProps) => {
   const [products, setProducts] = useState<TProductCard[]>(initialProductList);
-  const { tagFilters, hasFilters, filterProducts } = useFilter();
+  const { tagFilters, priceFilters, hasFilters, filterProducts } = useFilter();
   const { sortOption, sortProducts } = useSort();
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export const ProductList = ({ initialProductList }: ProductListProps) => {
     if (!isEqual(products, updatedProducts)) {
       setProducts(updatedProducts);
     }
-  }, [tagFilters, sortOption, products]);
+  }, [tagFilters, priceFilters, sortOption, products]);
 
   return (
     <div className="flex flex-wrap justify-center gap-4">

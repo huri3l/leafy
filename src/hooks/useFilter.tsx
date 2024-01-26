@@ -2,14 +2,18 @@ import { TProductCard } from '@/content/types';
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 import { useMemo } from 'react';
 
+export const __from = 'from';
+export const __to = 'to';
+export const __filter = 'filter';
+
 export const useFilter = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = new URLSearchParams(Array.from(useSearchParams().entries()));
-  const tagFilters = searchParams.get('filter')?.split('&') ?? [];
+  const tagFilters = searchParams.get(__filter)?.split('&').filter(Boolean) ?? [];
   const priceFilters = {
-    from: searchParams.get('from') ?? undefined,
-    to: searchParams.get('to') ?? undefined,
+    from: searchParams.get(__from) ?? undefined,
+    to: searchParams.get(__to) ?? undefined,
   };
 
   const updateURL = () => {
@@ -25,18 +29,18 @@ export const useFilter = () => {
     if (filterIndex !== -1) return;
 
     tagFilters?.push(newFilter);
-    searchParams.set('filter', tagFilters.join('&'));
+    searchParams.set(__filter, tagFilters.join('&'));
 
     updateURL();
   };
 
-  const insertPriceFilter = (method: 'from' | 'to', value: number) => {
-    if (method === 'from') {
-      searchParams.set('from', String(value));
+  const insertPriceFilter = (method: typeof __from | typeof __to, value: number) => {
+    if (method === __from) {
+      searchParams.set(__from, String(value));
     }
 
-    if (method === 'to') {
-      searchParams.set('to', String(value));
+    if (method === __to) {
+      searchParams.set(__to, String(value));
     }
 
     updateURL();
@@ -45,10 +49,10 @@ export const useFilter = () => {
   const removeTagFilter = (filterToRemove: string) => {
     if (tagFilters) {
       if (tagFilters?.length === 1) {
-        searchParams.delete('filter');
+        searchParams.delete(__filter);
       } else {
         searchParams.set(
-          'filter',
+          __filter,
           tagFilters.filter((filter) => filter !== filterToRemove).join('&'),
         );
       }
@@ -57,28 +61,28 @@ export const useFilter = () => {
     updateURL();
   };
 
-  const removePriceFilter = (method: 'from' | 'to') => {
-    if (method === 'from') {
-      searchParams.delete('from');
+  const removePriceFilter = (method: typeof __from | typeof __to) => {
+    if (method === __from) {
+      searchParams.delete(__from);
     }
 
-    if (method === 'to') {
-      searchParams.delete('to');
+    if (method === __to) {
+      searchParams.delete(__to);
     }
 
     updateURL();
   };
 
   const removeAllFilters = () => {
-    searchParams.delete('filter');
-    searchParams.delete('from');
-    searchParams.delete('to');
+    searchParams.delete(__filter);
+    searchParams.delete(__from);
+    searchParams.delete(__to);
 
     updateURL();
   };
 
   const filterProducts = (products: TProductCard[]) => {
-    const _filterProductByPrice = (price: number) => {
+    const __filterProductByPrice = (price: number) => {
       const from = Number(priceFilters.from);
       const to = Number(priceFilters.to);
 
@@ -100,7 +104,7 @@ export const useFilter = () => {
           return product.tags?.some((tag) => tag.includes(filter));
         });
 
-      const matchPriceFiltersCondition = _filterProductByPrice(product.price.raw);
+      const matchPriceFiltersCondition = __filterProductByPrice(product.price.raw);
 
       return matchTagFiltersCondition && matchPriceFiltersCondition;
     });

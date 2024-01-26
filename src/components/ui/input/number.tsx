@@ -10,7 +10,7 @@ export const NumberInput = forwardRef<HTMLInputElement, NumberInputProps>(
   ({ className, id, label, ...props }, ref) => {
     return (
       <div className="w-full flex flex-col">
-        <label htmlFor={id} className="text-lf-gray-800">
+        <label htmlFor={id} className="text-lf-gray-800 mb-1">
           {label}
         </label>
         <input

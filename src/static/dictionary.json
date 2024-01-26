@@ -9,7 +9,11 @@
     "add": "Adicionar",
     "seeMore": "Veja mais",
     "goHome": "Ir para Página Inicial",
-    "close": "Fechar"
+    "close": "Fechar",
+    "price": {
+      "from": "De: %p",
+      "to": "Até: %p"
+    }
   },
   "sort": {
     "ascending": "Ordem Crescente (A-Z)",
