@@ -8,7 +8,13 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['images.prismic.io', 'i.imgur.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.prismic.io',
+        pathname: '**',
+      },
+    ],
   },
 
   async rewrites() {

@@ -2,7 +2,7 @@ import { createClient } from '@/prismicio';
 import { Metadata } from 'next';
 import { OpenGraphType } from 'next/dist/lib/metadata/types/opengraph-types';
 import { ImageField, KeyTextField } from '@prismicio/client';
-import defaultMeta from '@/static/metadata.json';
+import { defaultMeta } from '@/static/metadata';
 
 type Pages = 'home' | 'category' | 'product';
 
@@ -55,7 +55,6 @@ const dynamicMetadata = ({
     applicationName: defaultMeta.applicationName,
     creator: defaultMeta.creator,
     authors: defaultMeta.authors,
-    themeColor: defaultMeta.themeColor,
     openGraph: {
       type: defaultMeta.openGraph.type as OpenGraphType,
       title: title,

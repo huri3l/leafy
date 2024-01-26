@@ -2,10 +2,11 @@ import { Footer } from '@/components/commons/footer';
 import { Header } from '@/components/commons/header';
 import { DeviceHandler } from '@/components/commons/device-handler';
 import { Metadata } from 'next';
-import defaultMeta from '@/static/metadata.json';
+import { defaultMeta, defaultViewport } from '@/static/metadata';
 import './globals.css';
 
 export const metadata: Metadata = defaultMeta;
+export const viewport = defaultViewport;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
